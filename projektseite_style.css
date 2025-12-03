@@ -1,0 +1,1432 @@
+@font-face {
+	font-family: 'Druk Wide Web';
+	src: url('DrukWide-Medium-Web.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
+}
+
+/* ===============================================================================================================*/
+/* Base Elements */
+/* ===============================================================================================================*/
+img{
+    width: 100%;
+    display: block;
+}
+video {
+    width: 100%;
+    display: block;
+}
+/* ===============================================================================================================*/
+/* Body */
+/* ===============================================================================================================*/
+
+/* WICHTIG: Entfernt den Standard-Rand, den Browser dem <body>-Element geben */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%; 
+    background-color: rgb(255, 255, 255);  
+
+    font-family: 'Druk Wide Web';
+	font-weight: 500;
+	font-style: normal;
+}
+/* ===============================================================================================================*/
+/* Verlinkungen Style */
+/* ===============================================================================================================*/
+.header-grid__title1 a {
+    color: black;          /* Stellt sicher, dass die Textfarbe schwarz bleibt */
+    text-decoration: none; /* Entfernt den Unterstrich */
+}
+
+.header-grid__title3 a {
+    color: black;          /* Stellt sicher, dass die Textfarbe schwarz bleibt */
+    text-decoration: none; /* Entfernt den Unterstrich */
+}
+
+
+
+/* ===============================================================================================================*/
+/* Box Sizing Reset */
+/* ===============================================================================================================*/
+*, *::before, *::after {
+    box-sizing: border-box; /* Stellt sicher, dass Padding und Border in die Breite (100%) eingerechnet werden */
+}
+
+/* ===============================================================================================================*/
+/* Header Grid */
+/* ===============================================================================================================*/
+
+.header-grid {
+    display: grid;
+    /* 12 Spalten */
+    grid-template-columns: repeat(3, 1fr); 
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    gap: 10px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 10px;
+    grid-template-areas: 
+        "title1 title2 title3";
+    background-color: white; 
+
+    position: fixed; /* 1. Fixiert das Element relativ zum Browser-Fenster */
+    top: 0;          /* 2. Positioniert es oben (Null-Abstand vom oberen Rand) */
+    left: 0;         /* 3. Positioniert es links (Null-Abstand vom linken Rand) */
+    width: 100%;     /* 4. Lässt es die gesamte Breite des Fensters einnehmen */
+    z-index: 1000;   /* 5. Sorgt dafür, dass es ÜBER allen anderen Inhalten liegt */
+}
+
+/* ===============================================================================================================*/
+/* Bild-Zoom-Effekt für die Startseite */
+/* ===============================================================================================================*/
+
+/* 1. Generelle Regeln für ALLE Bilder im Project Grid */
+/* Wir verwenden den direkten Kind-Selektor (> img), um alle <img>-Elemente 
+   innerhalb der Bild-Container zu adressieren. */
+.project-grid > div > a > img {
+    /* WICHTIG: Erlaubt uns, das Bild zu vergrößern (skalieren) */
+    transform: scale(1);
+    /* WICHTIG: Sorgt für eine weiche Animation über 0.4 Sekunden */
+    transition: transform 0.4s ease-in-out;
+    /* Damit das Bild nicht aus dem umgebenden Element herausrutscht 
+       (manchmal hilfreich, je nach Container-Setup) */
+    display: block; 
+}
+
+/* 2. Effekt, wenn die Maus über das BILD oder den LINK fährt */
+.project-grid > div > a:hover > img {
+    /* Vergrößere das Bild um 5% (1.05) */
+    transform: scale(1.05);
+}
+
+/* 3. OPTIONAL: Wenn du willst, dass der umgebende DIV-Container
+   die Ränder des gezoomten Bildes abschneidet und der Hover-Effekt
+   sanfter wirkt, füge dies zu deinen Container-Klassen hinzu. 
+   (z.B. für alle Container im .project-grid) */
+.project-grid > div {
+    /* Schneidet Teile des Inhalts ab, die über den Container hinausragen */
+    overflow: hidden; 
+}
+
+/* Optional: Verändere den Mauszeiger, wenn man über den Link fährt */
+.project-grid a:hover {
+    cursor: pointer;
+}
+
+/* ===============================================================================================================*/
+/* HEADER-GRID-ELEMENTE (Titel) */
+/* ===============================================================================================================*/
+
+.header-grid__title1 {
+    font-size: 20px;
+    color: black;
+    grid-area: title1;
+    text-align: left;
+}
+
+/* GRID-ELEMENTE (Item 2) */
+.header-grid__title2 {
+    font-size: 20px;
+    color: black;
+    grid-area: title2;
+    text-align: center;
+}
+
+/* GRID-ELEMENTE (Item 3) */
+.header-grid__title3 {
+    font-size: 20px;
+    color: black;
+    grid-area: title3;
+    text-align: right;
+}
+
+/* ===============================================================================================================*/
+/* GRID-ELEMENTE (Titel) */
+/* ===============================================================================================================*/
+
+.zentrierter-titel {
+    font-size: clamp(20px, 10vw, 130px);
+    color: black;
+    grid-area: titel;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    line-height: .85;
+}
+
+.zentrierter-titel_weiss {
+    font-size: clamp(20px, 10vw, 130px);
+    color: rgb(255, 255, 255);
+    grid-area: title;
+    margin-top: 0;
+    margin-bottom: 0;
+    z-index: 1;
+    text-align: center;
+    line-height: .85;
+}
+
+.zentrierter-titel_schwarz {
+    font-size: clamp(20px, 10vw, 130px);
+    color: rgb(0, 0, 0);
+    grid-area: title;
+    margin-top: 0;
+    margin-bottom: 0;
+    z-index: 1;
+    text-align: center;
+    line-height: .85;
+}
+
+.projektbeschreib {
+    font-size: clamp(14px, 3vw, 30px);
+    color: black;
+    grid-area: projektbeschreib;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+}
+
+.projektbeschreib1 {
+    font-size: clamp(14px, 3vw, 30px);
+    color: black;
+    grid-area: projektbeschreib1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+}
+
+.projektbeschreib_detail1 {
+    font-size: clamp(14px, 3vw, 30px);
+    color: black;
+    grid-area: projektbeschreib_detail1;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    justify-self: start;
+    padding-left: 30px;
+}
+
+.projektbeschreib_detail2 {
+    font-size: clamp(14px, 3vw, 30px);
+    color: black;
+    grid-area: projektbeschreib_detail2;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    justify-self: start;
+    padding-left: 30px;
+}
+
+/* =====================================================================================================================================*/
+
+/* ===============================================================================================================*/
+/* Startseite Grid */
+/* ===============================================================================================================*/
+
+.project-grid {
+    display: grid;
+    /* 12 Spalten */
+    grid-template-columns: repeat(12, 1fr); 
+    padding: 30px 0px 30px 0px; /* padding: Oben Rechts Unten Links; */
+    gap: 10px; /* Abstand zwischen.zentrierter-titel_schwarz den Grid-Elementen */
+    row-gap: 10px;
+    grid-template-areas: 
+        "zeitung-s zeitung-s zeitung-s paris-s paris-s paris-s motion-s motion-s motion-s london-s london-s london-s"
+         "titel titel titel titel titel titel titel titel titel titel titel titel"
+        "stunden stunden stunden fechten-s fechten-s fechten-s impro-s impro-s impro-s . . .";
+    background-color: white;
+    justify-items: center;
+    align-items: center;
+}
+
+/* ===============================================================================================================*/
+/* Project Grid  */
+/* ===============================================================================================================*/
+
+/* fechten (Grid) */
+.project-grid__fechten {
+    display: grid;
+    /* 12 Spalten */
+    grid-template-columns: repeat(12, 1fr); 
+     padding: 10px 0px 10px 0px; /* padding: Oben Rechts Unten Links; */
+    gap: 10px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 10px;
+    grid-template-areas: 
+        "title title title title title title title title title title title title"
+        "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib . . ."
+        "f_image1 f_image1 f_image1 f_image1 f_image1 f_image1 f_image2 f_image2 f_image2 f_image2 f_image2 f_image2"
+        "f_image3 f_image3 f_image3 f_image3 f_image3 f_image3 f_image4 f_image4 f_image4 f_image4 f_image4 f_image4"
+        "f_image5 f_image5 f_image5 f_image5 f_image5 f_image5 f_image6 f_image6 f_image6 f_image6 f_image6 f_image6"
+        "projektbeschreib_detail1 projektbeschreib_detail1 . . . . . . . . . .";
+    background-color: white; 
+    justify-items: center;
+    align-items: center;
+}
+
+/* 24 stunden (Grid) */
+.project-grid__24 {
+    display: grid;
+    /* 12 Spalten */
+    grid-template-columns: repeat(12, 1fr); 
+     padding: 10px 0px 0px 0px; /* padding: Oben Rechts Unten Links; */
+    gap: 10px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 10px;
+    grid-template-areas: 
+        "title1 . . . . . title2 . . . . title3"
+        "title title title title title title title title title title title title"
+        "detail detail detail detail detail detail detail detail detail detail detail detail"
+        "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib . . ."
+        "image1_24 image1_24 image1_24 image1_24 image1_24 image1_24 image2_24 image2_24 image2_24 image2_24 image2_24 image2_24"
+        "image3_24 image3_24 image3_24 image3_24 image3_24 image3_24 image4_24 image4_24 image4_24 image4_24 image4_24 image4_24"
+        "image5_24 image5_24 image5_24 image5_24 image5_24 image5_24 image5_24 image5_24 image5_24 . . ."
+        "image6_24 image6_24 image6_24 image6_24 image6_24 image6_24 image7_24 image7_24 image7_24 image7_24 image7_24 image7_24"
+        "image8_24 image8_24 image8_24 image8_24 image8_24 image8_24 image9_24 image9_24 image9_24 image9_24 image9_24 image9_24"
+        "cover_24 cover_24 cover_24 cover_24 cover_24 cover_24 cover_24 cover_24 cover_24 . . ."
+        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 . . projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 . .";
+    background-color: white;
+    justify-items: center;
+    align-items: center; 
+}
+
+/* paris (Grid) */
+.project-grid__paris {
+    display: grid;
+    /* 12 Spalten */
+    grid-template-columns: repeat(12, 1fr); 
+     padding: 10px 0px 10px 0px; /* padding: Oben Rechts Unten Links; */
+    gap: 10px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 10px;
+    grid-template-areas: 
+        "title1 . . . . . title2 . . . . title3"
+        "title title title title title title title title title title title title"
+        "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib . . ."
+        "image1_paris image1_paris image1_paris image1_paris image1_paris image1_paris image2_paris image2_paris image2_paris image2_paris image2_paris image2_paris"
+        "image3_paris image3_paris image3_paris image3_paris image3_paris image3_paris image4_paris image4_paris image4_paris image4_paris image4_paris image4_paris"
+        "image5_paris image5_paris image5_paris image5_paris image5_paris image5_paris image5_paris image5_paris image5_paris . . ."
+        "image6_paris image6_paris image6_paris image6_paris image6_paris image6_paris image7_paris image7_paris image7_paris image7_paris image7_paris image7_paris"
+        "image8_paris image8_paris image8_paris image8_paris image8_paris image8_paris image9_paris image9_paris image9_paris image9_paris image9_paris image9_paris"
+        "image10_paris image10_paris image10_paris image10_paris image10_paris image10_paris image11_paris image11_paris image11_paris image11_paris image11_paris image11_paris"
+        "image12_paris image12_paris image12_paris image12_paris image12_paris image12_paris image12_paris image12_paris image12_paris . . ."
+        "cover_paris cover_paris cover_paris cover_paris cover_paris cover_paris cover_paris cover_paris cover_paris . . ."
+        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 . . projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 . .";
+    background-color: white; 
+    justify-items: center;
+    align-items: center;
+}
+
+/* london (Grid) */
+.project-grid__london {
+    display: grid;
+    /* 12 Spalten */
+    grid-template-columns: repeat(12, 1fr); 
+    padding: 10px 0px 0px 0px; /* padding: Oben Rechts Unten Links; */
+    gap: 10px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 10px;
+    grid-template-areas:
+        "title title title title title title title title title title title title"
+        "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib . . ."
+        "image1_london image1_london image1_london image1_london image1_london image1_london image2_london image2_london image2_london image2_london image2_london image2_london"
+        "image3_london image3_london image3_london image3_london image3_london image3_london image4_london image4_london image4_london image4_london image4_london image4_london"
+        "image5_london image5_london image5_london image5_london image5_london image5_london image5_london image5_london image5_london . . ."
+        "image6_london image6_london image6_london image6_london image6_london image6_london image7_london image7_london image7_london image7_london image7_london image7_london"
+        "image8_london image8_london image8_london image8_london image8_london image8_london image9_london image9_london image9_london image9_london image9_london image9_london"
+        "image10_london image10_london image10_london image10_london image10_london image10_london image10_london image10_london image10_london . . ."
+        "image11_london image11_london image11_london image11_london image11_london image11_london image12_london image12_london image12_london image12_london image12_london image12_london"
+        "image13_london image13_london image13_london image13_london image13_london image13_london image14_london image14_london image14_london image14_london image14_london image14_london"
+        "cover_london cover_london cover_london cover_london cover_london cover_london cover_london cover_london cover_london . . ."
+        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 . . projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 . .";
+    background-color: white; 
+    justify-items: center;
+    align-items: center;
+}
+
+/* motion (Grid) */
+.project-grid__motion {
+    display: grid;
+    /* 12 Spalten */
+    grid-template-columns: repeat(12, 1fr); 
+     padding: 0px 0px 10px 0px; /* padding: Oben Rechts Unten Links; */
+    gap: 10px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 10px;
+    grid-template-areas: 
+        "title title title title title title title title title title title title"
+        "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib . . ."
+        "motion_video1 motion_video1 motion_video1 motion_video2 motion_video2 motion_video2 motion_video3 motion_video3 motion_video3 motion_video4 motion_video4 motion_video4"
+        "motion_video5 motion_video5 motion_video5 motion_video6 motion_video6 motion_video6 motion_video7 motion_video7 motion_video7 motion_video8 motion_video8 motion_video8"
+        "motion_video9 motion_video9 motion_video9 motion_video10 motion_video10 motion_video10 motion_video11 motion_video11 motion_video11 motion_video12 motion_video12 motion_video12"
+        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 . . . . . .";
+    background-color: white; 
+    justify-items: center;
+    align-items: center;
+}
+
+/* impro (Grid) */
+.project-grid__impro {
+    display: grid;
+    /* 12 Spalten */
+    grid-template-columns: repeat(12, 1fr); 
+     padding: 10px 0px 10px 0px; /* padding: Oben Rechts Unten Links; */
+    gap: 10px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 10px;
+    grid-template-areas: 
+        "title title title title title title title title title title title title"
+        "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib . . ."
+        "i_image1 i_image1 i_image1 i_image1 i_image1 i_image1 i_image2 i_image2 i_image2 i_image2 i_image2 i_image2"
+        "i_image3 i_image3 i_image3 i_image3 i_image3 i_image3 i_image4 i_image4 i_image4 i_image4 i_image4 i_image4"
+        "projektbeschreib1 projektbeschreib1 projektbeschreib1 projektbeschreib1 projektbeschreib1 projektbeschreib1 projektbeschreib1 projektbeschreib1 projektbeschreib1 . . ."
+        "i_image5 i_image5 i_image5 i_image5 i_image6 i_image6 i_image6 i_image6 i_image7 i_image7 i_image7 i_image7"
+        "i_image8 i_image8 i_image8 i_image8 i_image8 i_image8 i_image9 i_image9 i_image9 i_image9 i_image9 i_image9"
+        "i_image10 i_image10 i_image10 i_image10 i_image10 i_image10 i_image11 i_image11 i_image11 i_image11 i_image11 i_image11"
+        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 . . . . . .";
+    background-color: white; 
+    justify-items: center;
+    align-items: center;
+}
+
+/* zeitung (Grid) */
+.project-grid__zeitung {
+    display: grid;
+    /* 12 Spalten */
+    grid-template-columns: repeat(12, 1fr); 
+     padding: 0px 0px 0px 0px; /* padding: Oben Rechts Unten Links; */
+    gap: 10px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 10px;
+    grid-template-areas: 
+        "title title title title title title title title title title title title"
+        "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib . . ."
+        "p_image1 p_image1 p_image1 p_image2 p_image2 p_image2 p_image3 p_image3 p_image3 p_image4 p_image4 p_image4"
+        "p_image5 p_image5 p_image5 p_image5 p_image5 p_image5 p_animation p_animation p_animation p_animation p_animation p_animation"
+        "projektbeschreib1 projektbeschreib1 projektbeschreib1 projektbeschreib1 projektbeschreib1 projektbeschreib1 projektbeschreib1 projektbeschreib1 projektbeschreib1 . . ."
+        "z_image1 z_image1 z_image1 z_image1 z_image1 z_image1 z_image2 z_image2 z_image2 z_image2 z_image2 z_image2"
+        "z_image3 z_image3 z_image3 z_image3 z_image3 z_image3 z_image4 z_image4 z_image4 z_image4 z_image4 z_image4"
+        "z_image5 z_image5 z_image5 z_image5 z_image5 z_image5 . . . . . ."
+        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 . . . . . .";
+    background-color: white; 
+    justify-items: center;
+    align-items: center;
+}
+
+/* ueber mich (Grid) */
+.project-grid__ueber-mich {
+    display: grid;
+    /* 12 Spalten */
+    grid-template-columns: repeat(12, 1fr); 
+     padding: 10px 0px 10px 0px; /* padding: Oben Rechts Unten Links; */
+    gap: 10px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 10px;
+    grid-template-areas: 
+        "title title title title title title title title title title title title"
+        "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib . . ."
+        "u_image1 u_image1 u_image1 u_image2 u_image2 u_image2 u_image3 u_image3 u_image3 u_image4 u_image4 u_image4"
+        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1"
+        "projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2";
+    background-color: white; 
+    justify-items: center;
+    align-items: center;
+}
+
+/* ===============================================================================================================*/
+/* Project Overall */
+/* ===============================================================================================================*/
+
+.project-overall_london {
+    display: grid;
+    /* 12 Spalten */
+    grid-template-columns: repeat(9, 1fr); 
+    padding: 20px 30px 20px 30px; /* padding: Oben Rechts Unten Links; */
+    gap: 10px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 10px;
+    grid-template-areas: 
+        "overall_1 overall_2-3 overall_4-5 overall_6-7 overall_8-9 overall_10-11 overall_12-13 overall_14-15 overall_16-17"
+        "overall_18-19 overall_20-21 overall_22-23 overall_24-25 overall_26-27 overall_28-29 overall_30-31 overall_32-33 overall_34-35"
+        "overall_36-37 overall_38-39 overall_40-41 overall_42-43 overall_44-45 overall_46-47 overall_48-49 overall_50-51 overall_52-53"
+        "overall_54-55 overall_56-57 overall_58-59 overall_60-61 overall_62-63 overall_64-65 overall_66-67 overall_68-69 overall_70-71"
+        "overall_72-73 overall_74-75 overall_76-77 overall_78-79 overall_80-81 overall_82-83 overall_84-85 overall_86-87 overall_88-89"
+        "overall_90-91 overall_92-93 overall_94-95 overall_96-97 overall_98-99 overall_100-101 overall_102-103 overall_104-105 overall_106-107"
+        "overall_108-109 overall_110-111 overall_112-113 overall_114-115 overall_116-117 overall_118-119 overall_120-121 overall_122-123 overall_124-125"
+        "overall_126-127 overall_128-129 overall_130-131 overall_132-133 overall_134-135 overall_136-137 overall_138-139 overall_140-141 overall_142-143"
+        "overall_144-145 overall_146-147 overall_148-149 overall_150-151 overall_152-153 overall_154-155 overall_156-157 overall_158-159 .";
+    background-color: rgb(0, 0, 0); 
+}
+
+/* ===============================================================================================================*/
+/* Media Query für Smartphones (z.B. maximale Breite 768px) */
+/* ===============================================================================================================*/
+@media (max-width: 768px) {
+
+    /* 2. OPTIONAL: Wenn Sie den Header verkleinern wollen */
+    .header-grid__title1, .header-grid__title2, .header-grid__title3 {
+        font-size: 14px; /* Beispiel: Kleinere Schrift im Header auf dem Handy */
+    }
+    .header-grid {
+        /* Standard: 10px ringsherum. NEU: Nur 5px */
+        padding: 5px; /* Kurzform für 5px 5px 5px 5px */
+        /* Optional: Reduzieren Sie den Abstand zwischen den Titeln */
+        gap: 5px;
+        row-gap: 5px;
+    }
+
+    .projektbeschreib, .projektbeschreib1,.projektbeschreib_detail1, .projektbeschreib_detail2 {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 15px;
+    }
+
+    /* 1. ANPASSUNG DER GRID-ELEMENTE (motion) */
+    .project-grid__motion {
+        /* Hier bleibt die Spaltenanzahl 12, aber wir vergrößern die Areas! */
+        grid-template-areas: 
+            "title title title title title title title title title title title title"
+            "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib ."
+            "motion_video1 motion_video1 motion_video1 motion_video1 motion_video2 motion_video2 motion_video2 motion_video2 motion_video3 motion_video3 motion_video3 motion_video3"
+            "motion_video4 motion_video4 motion_video4 motion_video4 motion_video5 motion_video5 motion_video5 motion_video5 motion_video6 motion_video6 motion_video6 motion_video6"
+            "motion_video7 motion_video7 motion_video7 motion_video7 motion_video8 motion_video8 motion_video8 motion_video8 motion_video9 motion_video9 motion_video9 motion_video9"
+            "motion_video10 motion_video10 motion_video10 motion_video10 motion_video11 motion_video11 motion_video11 motion_video11 motion_video12 motion_video12 motion_video12 motion_video12"
+            "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 . . . . . .";
+    }
+
+    .project-overall_london {
+    display: grid;
+    /* 12 Spalten */
+    grid-template-columns: repeat(9, 1fr); 
+    padding: 10px 10px 10px 10px; /* padding: Oben Rechts Unten Links; */
+    gap: 5px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 5px;
+    background-color: rgb(0, 0, 0); 
+    }
+
+    .project-grid__fechten {
+    display: grid;
+    /* 12 Spalten */
+    grid-template-columns: repeat(12, 1fr); 
+     padding: 10px 0px 10px 0px; /* padding: Oben Rechts Unten Links; */
+    gap: 10px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 10px;
+    grid-template-areas: 
+        "title title title title title title title title title title title title"
+        "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib ."
+        "f_image1 f_image1 f_image1 f_image1 f_image1 f_image1 f_image2 f_image2 f_image2 f_image2 f_image2 f_image2"
+        "f_image3 f_image3 f_image3 f_image3 f_image3 f_image3 f_image4 f_image4 f_image4 f_image4 f_image4 f_image4"
+        "f_image5 f_image5 f_image5 f_image5 f_image5 f_image5 f_image6 f_image6 f_image6 f_image6 f_image6 f_image6"
+        "projektbeschreib_detail1 projektbeschreib_detail1 . . . . . . . . . .";
+    background-color: white; 
+    justify-items: center;
+    align-items: center;
+}
+
+.project-grid__24 {
+    display: grid;
+    /* 12 Spalten */
+    grid-template-columns: repeat(12, 1fr); 
+     padding: 10px 0px 0px 0px; /* padding: Oben Rechts Unten Links; */
+    gap: 10px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 10px;
+    grid-template-areas: 
+        "title1 . . . . . title2 . . . . title3"
+        "title title title title title title title title title title title title"
+        "detail detail detail detail detail detail detail detail detail detail detail detail"
+        "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib ."
+        "image1_24 image1_24 image1_24 image1_24 image1_24 image1_24 image2_24 image2_24 image2_24 image2_24 image2_24 image2_24"
+        "image3_24 image3_24 image3_24 image3_24 image3_24 image3_24 image4_24 image4_24 image4_24 image4_24 image4_24 image4_24"
+        "image5_24 image5_24 image5_24 image5_24 image5_24 image5_24 image5_24 image5_24 image5_24 image5_24 image5_24 image5_24"
+        "image6_24 image6_24 image6_24 image6_24 image6_24 image6_24 image7_24 image7_24 image7_24 image7_24 image7_24 image7_24"
+        "image8_24 image8_24 image8_24 image8_24 image8_24 image8_24 image9_24 image9_24 image9_24 image9_24 image9_24 image9_24"
+        "cover_24 cover_24 cover_24 cover_24 cover_24 cover_24 cover_24 cover_24 cover_24 cover_24 cover_24 cover_24"
+        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 . . projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 . .";
+    background-color: white;
+    justify-items: center;
+    align-items: center; 
+}
+
+.project-grid__paris {
+    display: grid;
+    /* 12 Spalten */
+    grid-template-columns: repeat(12, 1fr); 
+     padding: 10px 0px 10px 0px; /* padding: Oben Rechts Unten Links; */
+    gap: 10px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 10px;
+    grid-template-areas: 
+        "title1 . . . . . title2 . . . . title3"
+        "title title title title title title title title title title title title"
+        "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib ."
+        "image1_paris image1_paris image1_paris image1_paris image1_paris image1_paris image2_paris image2_paris image2_paris image2_paris image2_paris image2_paris"
+        "image3_paris image3_paris image3_paris image3_paris image3_paris image3_paris image4_paris image4_paris image4_paris image4_paris image4_paris image4_paris"
+        "image5_paris image5_paris image5_paris image5_paris image5_paris image5_paris image5_paris image5_paris image5_paris image5_paris image5_paris image5_paris"
+        "image6_paris image6_paris image6_paris image6_paris image6_paris image6_paris image7_paris image7_paris image7_paris image7_paris image7_paris image7_paris"
+        "image8_paris image8_paris image8_paris image8_paris image8_paris image8_paris image9_paris image9_paris image9_paris image9_paris image9_paris image9_paris"
+        "image10_paris image10_paris image10_paris image10_paris image10_paris image10_paris image11_paris image11_paris image11_paris image11_paris image11_paris image11_paris"
+        "image12_paris image12_paris image12_paris image12_paris image12_paris image12_paris image12_paris image12_paris image12_paris image12_paris image12_paris image12_paris"
+        "cover_paris cover_paris cover_paris cover_paris cover_paris cover_paris cover_paris cover_paris cover_paris cover_paris cover_paris cover_paris"
+        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 . . projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 . .";
+    background-color: white; 
+    justify-items: center;
+    align-items: center;
+}
+
+.project-grid__london {
+    display: grid;
+    /* 12 Spalten */
+    grid-template-columns: repeat(12, 1fr); 
+    padding: 10px 0px 0px 0px; /* padding: Oben Rechts Unten Links; */
+    gap: 10px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 10px;
+    grid-template-areas:
+        "title title title title title title title title title title title title"
+        "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib ."
+        "image1_london image1_london image1_london image1_london image1_london image1_london image2_london image2_london image2_london image2_london image2_london image2_london"
+        "image3_london image3_london image3_london image3_london image3_london image3_london image4_london image4_london image4_london image4_london image4_london image4_london"
+        "image5_london image5_london image5_london image5_london image5_london image5_london image5_london image5_london image5_london image5_london image5_london image5_london"
+        "image6_london image6_london image6_london image6_london image6_london image6_london image7_london image7_london image7_london image7_london image7_london image7_london"
+        "image8_london image8_london image8_london image8_london image8_london image8_london image9_london image9_london image9_london image9_london image9_london image9_london"
+        "image10_london image10_london image10_london image10_london image10_london image10_london image10_london image10_london image10_london image10_london image10_london image10_london"
+        "image11_london image11_london image11_london image11_london image11_london image11_london image12_london image12_london image12_london image12_london image12_london image12_london"
+        "image13_london image13_london image13_london image13_london image13_london image13_london image14_london image14_london image14_london image14_london image14_london image14_london"
+        "cover_london cover_london cover_london cover_london cover_london cover_london cover_london cover_london cover_london cover_london cover_london cover_london"
+        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 . . projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 . .";
+    background-color: white; 
+    justify-items: center;
+    align-items: center;
+}
+
+.project-grid__impro {
+    display: grid;
+    /* 12 Spalten */
+    grid-template-columns: repeat(12, 1fr); 
+     padding: 10px 0px 10px 0px; /* padding: Oben Rechts Unten Links; */
+    gap: 10px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 10px;
+    grid-template-areas: 
+        "title title title title title title title title title title title title"
+        "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib ."
+        "i_image1 i_image1 i_image1 i_image1 i_image1 i_image1 i_image2 i_image2 i_image2 i_image2 i_image2 i_image2"
+        "i_image3 i_image3 i_image3 i_image3 i_image3 i_image3 i_image4 i_image4 i_image4 i_image4 i_image4 i_image4"
+        "projektbeschreib1 projektbeschreib1 projektbeschreib1 projektbeschreib1 projektbeschreib1 projektbeschreib1 projektbeschreib1 projektbeschreib1 projektbeschreib1 projektbeschreib1 projektbeschreib1 ."
+        "i_image5 i_image5 i_image5 i_image5 i_image6 i_image6 i_image6 i_image6 i_image7 i_image7 i_image7 i_image7"
+        "i_image8 i_image8 i_image8 i_image8 i_image8 i_image8 i_image9 i_image9 i_image9 i_image9 i_image9 i_image9"
+        "i_image10 i_image10 i_image10 i_image10 i_image10 i_image10 i_image11 i_image11 i_image11 i_image11 i_image11 i_image11"
+        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 . . . . . .";
+    background-color: white; 
+    justify-items: center;
+    align-items: center;
+}
+
+.project-grid__zeitung {
+    display: grid;
+    /* 12 Spalten */
+    grid-template-columns: repeat(12, 1fr); 
+     padding: 0px 0px 0px 0px; /* padding: Oben Rechts Unten Links; */
+    gap: 10px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 10px;
+    grid-template-areas: 
+        "title title title title title title title title title title title title"
+        "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib ."
+        "p_image1 p_image1 p_image1 p_image2 p_image2 p_image2 p_image3 p_image3 p_image3 p_image4 p_image4 p_image4"
+        "p_image5 p_image5 p_image5 p_image5 p_image5 p_image5 p_animation p_animation p_animation p_animation p_animation p_animation"
+        "projektbeschreib1 projektbeschreib1 projektbeschreib1 projektbeschreib1 projektbeschreib1 projektbeschreib1 projektbeschreib1 projektbeschreib1 projektbeschreib1 projektbeschreib1 projektbeschreib1 ."
+        "z_image1 z_image1 z_image1 z_image1 z_image1 z_image1 z_image2 z_image2 z_image2 z_image2 z_image2 z_image2"
+        "z_image3 z_image3 z_image3 z_image3 z_image3 z_image3 z_image4 z_image4 z_image4 z_image4 z_image4 z_image4"
+        "z_image5 z_image5 z_image5 z_image5 z_image5 z_image5 . . . . . ."
+        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 . . . . . .";
+    background-color: white; 
+    justify-items: center;
+    align-items: center;
+}
+
+.project-grid__ueber-mich {
+    display: grid;
+    /* 12 Spalten */
+    grid-template-columns: repeat(12, 1fr); 
+     padding: 10px 0px 10px 0px; /* padding: Oben Rechts Unten Links; */
+    gap: 10px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 10px;
+    grid-template-areas: 
+        "title title title title title title title title title title title title"
+        "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib ."
+        "u_image1 u_image1 u_image1 u_image1 u_image1 u_image1 u_image2 u_image2 u_image2 u_image2 u_image2 u_image2"
+        "u_image3 u_image3 u_image3 u_image3 u_image3 u_image3 u_image4 u_image4 u_image4 u_image4 u_image4 u_image4"
+        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1"
+        "projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2";
+    background-color: white; 
+    justify-items: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    
+    .project-grid {
+        /* Die Spaltenbasis von 12 bleibt, aber wir nutzen sie anders */
+        
+        /* NEUE LAYOUT-DEFINITION FÜR MOBILE: */
+        grid-template-areas: 
+            /* 1. Zeile: 2 Bilder, jedes 6 Spalten breit (6 + 6 = 12) */
+            "zeitung-s zeitung-s zeitung-s zeitung-s zeitung-s zeitung-s paris-s paris-s paris-s paris-s paris-s paris-s"
+            
+            /* 2. Zeile: 2 weitere Bilder, jedes 6 Spalten breit */
+            "motion-s motion-s motion-s motion-s motion-s motion-s london-s london-s london-s london-s london-s london-s"
+            
+            /* 3. Zeile: Der Titel über die volle Breite (12 Spalten) */
+            "titel titel titel titel titel titel titel titel titel titel titel titel"
+            
+            /* 4. Zeile: Die letzten beiden Bilder, jedes 6 Spalten breit */
+            "stunden stunden stunden stunden stunden stunden fechten-s fechten-s fechten-s fechten-s fechten-s fechten-s"
+            
+            /* Die letzte Area 'impro-s' braucht eine neue Zeile, da in der vorigen kein Platz mehr ist. 
+               Oder, falls das Grid-Design nur 4 Bilder (Zeitung/Paris/Motion/London) + Titel + 3 (Stunden/Fechten/Impro) vorsieht, 
+               müssen wir es auf 2er-Gruppen anpassen: */
+
+            /* KORRIGIERTE 4. Zeile: Stunden/Fechten, je 6 Spalten breit */
+            "stunden stunden stunden stunden stunden stunden fechten-s fechten-s fechten-s fechten-s fechten-s fechten-s"
+            
+            /* 5. Zeile: Impro und eine leere 6-Spalten-Area (falls nur 1 Bild übrig ist) */
+            "impro-s impro-s impro-s impro-s impro-s impro-s . . . . . ."; 
+            
+        /* Reduzieren Sie optional die Abstände für Mobilgeräte */
+        padding: 10px 0px; 
+        gap: 5px;
+        row-gap: 5px;
+    }
+
+    .zentrierter-titel_schwarz {
+        /* WICHTIG: Die Textzentrierung und nowrap müssen hier oder in der Basis-Definition stehen */
+        white-space: nowrap; 
+        text-align: center;
+        
+        /* Den Skalierungsfaktor von 10vw auf 6vw reduzieren */
+        /* Dadurch wird die Schrift auf kleinen Bildschirmen deutlich kleiner und passt in eine Zeile. */
+        font-size: clamp(20px, 6vw, 130px); 
+    }
+
+    .zentrierter-titel_weiss {
+        /* WICHTIG: Die Textzentrierung und nowrap müssen hier oder in der Basis-Definition stehen */
+        white-space: nowrap; 
+        text-align: center;
+        
+        /* Den Skalierungsfaktor von 10vw auf 6vw reduzieren */
+        /* Dadurch wird die Schrift auf kleinen Bildschirmen deutlich kleiner und passt in eine Zeile. */
+        font-size: clamp(20px, 6vw, 130px); 
+    }
+
+    .zentrierter-titel {  
+        /* Optional: Reduzieren Sie den Skalierungsfaktor für kleine Bildschirme weiter, 
+           falls der Titel zu weit über den Rand ragt. */
+        font-size: clamp(20px, 8vw, 130px); /* Zum Beispiel 8vw statt 10vw */
+    }
+
+} 
+}
+
+/* ===============================================================================================================*/
+/* Startseite (Bilder) */
+/* ===============================================================================================================*/
+
+.startseite-bild_zeitung {
+    grid-area: zeitung-s;
+}
+
+.startseite-bild_paris {
+    grid-area: paris-s;
+}
+
+.startseite-bild_motion {
+    grid-area: motion-s;
+}
+
+.startseite-bild_london {
+    grid-area: london-s;
+}
+
+.startseite-bild_24h {
+    grid-area: stunden;
+}
+
+.startseite-bild_fechten {
+    grid-area: fechten-s;
+}
+
+.startseite-bild_impro {
+    grid-area: impro-s;
+}
+/* ===============================================================================================================*/
+/* GRID-ELEMENTE (Bilder) */
+/* ===============================================================================================================*/
+/* ueber mich (Bilder) */
+.project-grid__u_image1 {
+    grid-area: u_image1;
+}
+
+.project-grid__u_image2 {
+    grid-area: u_image2;
+}
+
+.project-grid__u_image3 {
+    grid-area: u_image3;
+}
+
+.project-grid__u_image4 {
+    grid-area: u_image4;
+}
+
+/* fechten (Bilder) */
+.project-grid__bild {
+    grid-area: title;
+}
+
+.project-grid__f_image1 {
+    grid-area: f_image1;
+}
+
+.project-grid__f_image2 {
+    grid-area: f_image2;
+}
+
+.project-grid__f_image3 {
+    grid-area: f_image3;
+}
+
+.project-grid__f_image4 {
+    grid-area: f_image4;
+}
+
+.project-grid__f_image5 {
+    grid-area: f_image5;
+}
+
+.project-grid__f_image6 {
+    grid-area: f_image6;
+}
+
+/* 24 stunden (Bilder) */
+.project-grid__bild {
+    grid-area: title;
+    justify-self: stretch;
+}
+.project-grid__bild-img {
+    height: 100vh;
+    object-fit: cover;
+}
+
+.project-grid__24__image1 {
+    grid-area: image1_24;
+}
+
+.project-grid__24__image2 {
+    grid-area: image2_24;
+}
+
+.project-grid__24__image3 {
+    grid-area: image3_24;
+}
+
+.project-grid__24__image4 {
+    grid-area: image4_24;
+}
+
+.project-grid__24__image5 {
+    grid-area: image5_24;
+}
+
+.project-grid__24__image6 {
+    grid-area: image6_24;
+}
+
+.project-grid__24__image7 {
+    grid-area: image7_24;
+}
+
+.project-grid__24__image8 {
+    grid-area: image8_24;
+}
+
+.project-grid__24__image9 {
+    grid-area: image9_24;
+}
+
+.project-grid__cover_24 {
+    grid-area: cover_24;
+}
+
+/* ===============================================================================================================*/
+/* Paris (Bilder) */
+.project-grid__paris__image1 {
+    grid-area: image1_paris;
+}
+
+.project-grid__paris__image2 {
+    grid-area: image2_paris;
+}
+
+.project-grid__paris__image3 {
+    grid-area: image3_paris;
+}
+
+.project-grid__paris__image4 {
+    grid-area: image4_paris;
+}
+
+.project-grid__paris__image5 {
+    grid-area: image5_paris;
+}
+
+.project-grid__paris__image6 {
+    grid-area: image6_paris;
+}
+
+.project-grid__paris__image7 {
+    grid-area: image7_paris;
+}
+
+.project-grid__paris__image8 {
+    grid-area: image8_paris;
+}
+
+.project-grid__paris__image9 {
+    grid-area: image9_paris;
+}
+
+.project-grid__paris__image10 {
+    grid-area: image10_paris;
+}
+
+.project-grid__paris__image11 {
+    grid-area: image11_paris;
+}
+
+.project-grid__paris__image12 {
+    grid-area: image12_paris;
+}
+
+.project-grid__cover_paris {
+    grid-area: cover_paris;
+}
+
+.project-grid__detail2_paris {
+    grid-area: detail2_paris;
+}
+
+
+/* ===============================================================================================================*/
+/* motion(Bilder) */
+.project-grid__motion_video1 {
+    grid-area: motion_video1;
+}
+
+.project-grid__motion_video2 {
+    grid-area: motion_video2;
+}
+
+.project-grid__motion_video3 {
+    grid-area: motion_video3;
+}
+
+.project-grid__motion_video4 {
+    grid-area: motion_video4;
+}
+
+.project-grid__motion_video5 {
+    grid-area: motion_video5;
+}
+
+.project-grid__motion_video6 {
+    grid-area: motion_video6;
+}
+
+.project-grid__motion_video7 {
+    grid-area: motion_video7;
+}
+
+.project-grid__motion_video8 {
+    grid-area: motion_video8;
+}
+
+.project-grid__motion_video9 {
+    grid-area: motion_video9;
+}
+
+.project-grid__motion_video10 {
+    grid-area: motion_video10;
+}
+
+.project-grid__motion_video11 {
+    grid-area: motion_video11;
+}
+
+.project-grid__motion_video12 {
+    grid-area: motion_video12;
+}
+
+/* ===============================================================================================================*/
+/* impro (Bilder) */
+
+.project-grid__i_image1 {
+    grid-area: i_image1;
+}
+
+.project-grid__i_image2 {
+    grid-area: i_image2; 
+}
+
+.project-grid__i_image3 {
+    grid-area: i_image3; 
+}
+
+.project-grid__i_image4 {
+    grid-area: i_image4;
+}
+
+.project-grid__i_image5 {
+    grid-area: i_image5; 
+}
+
+.project-grid__i_image6 {
+    grid-area: i_image6; 
+}
+
+.project-grid__i_image7 {
+    grid-area: i_image7;
+}
+
+.project-grid__i_image8 {
+    grid-area: i_image8; 
+}
+
+.project-grid__i_image9 {
+    grid-area: i_image9;
+}
+
+.project-grid__i_image10 {
+    grid-area: i_image10; 
+}
+
+.project-grid__i_image11 {
+    grid-area: i_image11; 
+}
+
+/* ===============================================================================================================*/
+/* Zeitung (Bilder) */
+.project-grid__z_image1 {
+    grid-area: z_image1;
+}
+
+.project-grid__z_image2 {
+    grid-area: z_image2;
+}
+
+.project-grid__z_image3 {
+    grid-area: z_image3;
+}
+
+.project-grid__z_image4 {
+    grid-area: z_image4;
+}
+
+.project-grid__z_image5 {
+    grid-area: z_image5;
+}
+
+/* ===============================================================================================================*/
+/* Plakat (Bilder) */
+.project-grid__p_image1 {
+    grid-area: p_image1;
+}
+
+.project-grid__p_image2 {
+    grid-area: p_image2;
+}
+
+.project-grid__p_image3 {
+    grid-area: p_image3;
+}
+
+.project-grid__p_image4 {
+    grid-area: p_image4;
+}
+
+.project-grid__p_image5 {
+    grid-area: p_image5;
+}
+
+.project-grid__p_animation {
+    grid-area: p_animation;
+}
+
+/* ===============================================================================================================*/
+/* London (Bilder) */
+.project-grid__london__image1 {
+    grid-area: image1_london;
+}
+
+.project-grid__london__image2 {
+    grid-area: image2_london;
+}
+
+.project-grid__london__image3 {
+    grid-area: image3_london;
+}
+
+.project-grid__london__image4 {
+    grid-area: image4_london;
+}
+
+.project-grid__london__image5 {
+    grid-area: image5_london;
+}
+
+.project-grid__london__image6 {
+    grid-area: image6_london;
+}
+
+.project-grid__london__image7 {
+    grid-area: image7_london;
+}
+
+.project-grid__london__image8 {
+    grid-area: image8_london;
+}
+
+.project-grid__london__image9 {
+    grid-area: image9_london;
+}
+
+.project-grid__london__image10 {
+    grid-area: image10_london;
+}
+
+.project-grid__london__image11 {
+    grid-area: image11_london;
+}
+
+.project-grid__london__image12 {
+    grid-area: image12_london;
+}
+
+.project-grid__london__image13 {
+    grid-area: image13_london;
+}
+
+.project-grid__london__image14 {
+    grid-area: image14_london;
+}
+
+.project-grid__london__cover {
+    grid-area: cover_london;
+}
+/* ===============================================================================================================*/
+/* London overall (Bilder) */
+.project-overall__1 {
+    grid-area: overall_1;
+}
+
+.project-overall__2-3 {
+    grid-area: overall_2-3;
+}
+
+.project-overall__4-5 {
+    grid-area: overall_4-5;
+}
+
+.project-overall__6-7 {
+    grid-area: overall_6-7;
+}
+
+.project-overall__8-9 {
+    grid-area: overall_8-9;
+}
+
+.project-overall__10-11 {
+    grid-area: overall_10-11;
+}
+
+.project-overall__12-13 {
+    grid-area: overall_12-13;
+}
+
+.project-overall__14-15 {
+    grid-area: overall_14-15;
+}
+
+.project-overall__16-17 {
+    grid-area: overall_16-17;
+}
+
+.project-overall__18-19 {
+    grid-area: overall_18-19;
+}
+
+.project-overall__20-21 {
+    grid-area: overall_20-21;
+}
+
+.project-overall__22-23 {
+    grid-area: overall_22-23;
+}
+
+.project-overall__24-25 {
+    grid-area: overall_24-25;
+}
+
+.project-overall__26-27 {
+    grid-area: overall_26-27;
+}
+
+.project-overall__28-29 {
+    grid-area: overall_28-29;
+}
+
+.project-overall__30-31 {
+    grid-area: overall_30-31;
+}
+
+.project-overall__32-33 {
+    grid-area: overall_32-33;
+}
+
+.project-overall__34-35 {
+    grid-area: overall_34-35;
+}
+
+.project-overall__36-37 {
+    grid-area: overall_36-37;
+}
+
+.project-overall__38-39 {
+    grid-area: overall_38-39;
+}
+
+.project-overall__40-41 {
+    grid-area: overall_40-41;
+}
+
+.project-overall__42-43 {
+    grid-area: overall_42-43;
+}
+
+.project-overall__44-45 {
+    grid-area: overall_44-45;
+}
+
+.project-overall__46-47 {
+    grid-area: overall_46-47;
+}
+
+.project-overall__48-49 {
+    grid-area: overall_48-49;
+}
+
+.project-overall__50-51 {
+    grid-area: overall_50-51;
+}
+
+.project-overall__52-53 {
+    grid-area: overall_52-53;
+}
+
+.project-overall__54-55 {
+    grid-area: overall_54-55;
+}
+
+.project-overall__56-57 {
+    grid-area: overall_56-57;
+}
+
+.project-overall__58-59 {
+    grid-area: overall_58-59;
+}
+
+.project-overall__60-61 {
+    grid-area: overall_60-61;
+}
+
+.project-overall__62-63 {
+    grid-area: overall_62-63;
+}
+
+.project-overall__64-65 {
+    grid-area: overall_64-65;
+}
+
+.project-overall__66-67 {
+    grid-area: overall_66-67;
+}
+
+.project-overall__68-69 {
+    grid-area: overall_68-69;
+}
+
+.project-overall__70-71 {
+    grid-area: overall_70-71;
+}
+
+.project-overall__72-73 {
+    grid-area: overall_72-73;
+}
+
+.project-overall__74-75 {
+    grid-area: overall_74-75;
+}
+
+.project-overall__76-77 {
+    grid-area: overall_76-77;
+}
+
+.project-overall__78-79 {
+    grid-area: overall_78-79;
+}
+
+.project-overall__80-81 {
+    grid-area: overall_80-81;
+}
+
+.project-overall__82-83 {
+    grid-area: overall_82-83;
+}
+
+.project-overall__84-85 {
+    grid-area: overall_84-85;
+}
+
+.project-overall__86-87 {
+    grid-area: overall_86-87;
+}
+
+.project-overall__88-89 {
+    grid-area: overall_88-89;
+}
+
+.project-overall__90-91 {
+    grid-area: overall_90-91;
+}
+
+.project-overall__92-93 {
+    grid-area: overall_92-93;
+}
+
+.project-overall__94-95 {
+    grid-area: overall_94-95;
+}
+
+.project-overall__96-97 {
+    grid-area: overall_96-97;
+}
+
+.project-overall__98-99 {
+    grid-area: overall_98-99;
+}
+
+.project-overall__100-101 {
+    grid-area: overall_100-101;
+}
+
+.project-overall__102-103 {
+    grid-area: overall_102-103;
+}
+
+.project-overall__104-105 {
+    grid-area: overall_104-105;
+}
+
+.project-overall__106-107 {
+    grid-area: overall_106-107;
+}
+
+.project-overall__108-109 {
+    grid-area: overall_108-109;
+}
+
+.project-overall__110-111 {
+    grid-area: overall_110-111;
+}
+
+.project-overall__112-113 {
+    grid-area: overall_112-113;
+}
+
+.project-overall__114-115 {
+    grid-area: overall_114-115;
+}
+
+.project-overall__116-117 {
+    grid-area: overall_116-117;
+}
+
+.project-overall__118-119 {
+    grid-area: overall_118-119;
+}
+
+.project-overall__120-121 {
+    grid-area: overall_120-121;
+}
+
+.project-overall__122-123 {
+    grid-area: overall_122-123;
+}
+
+.project-overall__124-125 {
+    grid-area: overall_124-125;
+}
+
+.project-overall__126-127 {
+    grid-area: overall_126-127;
+}
+
+.project-overall__128-129 {
+    grid-area: overall_128-129;
+}
+
+.project-overall__130-131 {
+    grid-area: overall_130-131;
+}
+
+.project-overall__132-133 {
+    grid-area: overall_132-133;
+}
+
+.project-overall__134-135 {
+    grid-area: overall_134-135;
+}
+
+.project-overall__136-137 {
+    grid-area: overall_136-137;
+}
+
+.project-overall__138-139 {
+    grid-area: overall_138-139;
+}
+
+.project-overall__140-141 {
+    grid-area: overall_140-141;
+}
+
+.project-overall__142-143 {
+    grid-area: overall_142-143;
+}
+
+.project-overall__144-145 {
+    grid-area: overall_144-145;
+}
+
+.project-overall__146-147 {
+    grid-area: overall_146-147;
+}
+
+.project-overall__148-149 {
+    grid-area: overall_148-149;
+}
+
+.project-overall__150-151 {
+    grid-area: overall_150-151;
+}
+
+.project-overall__152-153 {
+    grid-area: overall_152-153;
+}
+
+.project-overall__154-155 {
+    grid-area: overall_154-155;
+}
+
+.project-overall__156-157 {
+    grid-area: overall_156-157;
+}
+
+.project-overall__158-159 {
+    grid-area: overall_158-159;
+}
