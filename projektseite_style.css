@@ -71,8 +71,8 @@ body {
     /* 12 Spalten */
     grid-template-columns: repeat(3, 1fr); 
     padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
     padding-bottom: 10px;
     gap: 10px; /* Abstand zwischen den Grid-Elementen */
     row-gap: 10px;
@@ -209,7 +209,7 @@ body {
 }
 
 .projektbeschreib_detail1 {
-    font-size: clamp(14px, 3vw, 30px);
+    font-size: clamp(14px, 3vw, 20px);
     color: black;
     grid-area: projektbeschreib_detail1;
     padding-top: 10px;
@@ -219,9 +219,29 @@ body {
 }
 
 .projektbeschreib_detail2 {
-    font-size: clamp(14px, 3vw, 30px);
+    font-size: clamp(14px, 3vw, 20px);
     color: black;
     grid-area: projektbeschreib_detail2;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    justify-self: start;
+    padding-left: 30px;
+}
+
+.projektbeschreib_detail3 {
+    font-size: clamp(14px, 3vw, 30px);
+    color: black;
+    grid-area: projektbeschreib_detail3;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    justify-self: start;
+    padding-left: 30px;
+}
+
+.projektbeschreib_detail4 {
+    font-size: clamp(14px, 3vw, 30px);
+    color: black;
+    grid-area: projektbeschreib_detail4;
     padding-top: 10px;
     padding-bottom: 20px;
     justify-self: start;
@@ -439,8 +459,8 @@ body {
         "title title title title title title title title title title title title"
         "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib . . ."
         "u_image1 u_image1 u_image1 u_image2 u_image2 u_image2 u_image3 u_image3 u_image3 u_image4 u_image4 u_image4"
-        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1"
-        "projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2"
+        "projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3"
+        "projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4"
         "kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos";
     background-color: white; 
     justify-items: center;
@@ -486,9 +506,11 @@ body {
         /* Optional: Reduzieren Sie den Abstand zwischen den Titeln */
         gap: 5px;
         row-gap: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
-    .projektbeschreib, .projektbeschreib1,.projektbeschreib_detail1, .projektbeschreib_detail2, .kontaktinfos {
+    .projektbeschreib, .projektbeschreib1,.projektbeschreib_detail1, .projektbeschreib_detail2, .projektbeschreib_detail3, .projektbeschreib_detail4, .kontaktinfos {
         padding-top: 5px;
         padding-bottom: 5px;
         padding-left: 15px;
@@ -666,8 +688,8 @@ body {
         "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib ."
         "u_image1 u_image1 u_image1 u_image1 u_image1 u_image1 u_image2 u_image2 u_image2 u_image2 u_image2 u_image2"
         "u_image3 u_image3 u_image3 u_image3 u_image3 u_image3 u_image4 u_image4 u_image4 u_image4 u_image4 u_image4"
-        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1"
-        "projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2"
+        "projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3"
+        "projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4"
         "kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos";
     background-color: white; 
     justify-items: center;
