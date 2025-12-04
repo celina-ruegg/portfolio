@@ -263,7 +263,7 @@ body {
     gap: 0; 
     row-gap: 0;
     grid-template-areas: 
-        "zeitung-s paris-s motion-s london-s stunden fechten-s impro-s"; 
+        "zeitung-s paris-s motion-s london-s impro-s fechten-s stunden"; 
     /* WICHTIG: Setzt den Referenzpunkt für den absolut positionierten Titel */
     position: relative;
     background-color: white;
@@ -824,8 +824,8 @@ body {
         grid-template-areas: 
             "zeitung-s paris-s" 
             "london-s motion-s"
-            "stunden fechten-s"
-            "impro-s .";
+            "impro-s fechten-s"
+            "stunden .";
     }
 }
 
