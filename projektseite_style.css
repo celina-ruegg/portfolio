@@ -49,6 +49,10 @@ body {
     text-decoration: none; 
 }
 
+.kontaktinfos a {
+    color: black;          /* Stellt sicher, dass die Textfarbe schwarz bleibt */
+    text-decoration: none; 
+}
 
 
 /* ===============================================================================================================*/
@@ -160,6 +164,8 @@ body {
     margin-bottom: 0;
     text-align: center;
     line-height: .85;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 .zentrierter-titel_weiss {
@@ -216,6 +222,16 @@ body {
     font-size: clamp(14px, 3vw, 30px);
     color: black;
     grid-area: projektbeschreib_detail2;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    justify-self: start;
+    padding-left: 30px;
+}
+
+.kontaktinfos {
+    font-size: clamp(14px, 3vw, 30px);
+    color: black;
+    grid-area: kontaktinfos;
     padding-top: 10px;
     padding-bottom: 20px;
     justify-self: start;
@@ -424,7 +440,8 @@ body {
         "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib . . ."
         "u_image1 u_image1 u_image1 u_image2 u_image2 u_image2 u_image3 u_image3 u_image3 u_image4 u_image4 u_image4"
         "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1"
-        "projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2";
+        "projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2"
+        "kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos";
     background-color: white; 
     justify-items: center;
     align-items: center;
@@ -471,7 +488,7 @@ body {
         row-gap: 5px;
     }
 
-    .projektbeschreib, .projektbeschreib1,.projektbeschreib_detail1, .projektbeschreib_detail2 {
+    .projektbeschreib, .projektbeschreib1,.projektbeschreib_detail1, .projektbeschreib_detail2, .kontaktinfos {
         padding-top: 5px;
         padding-bottom: 5px;
         padding-left: 15px;
@@ -650,7 +667,8 @@ body {
         "u_image1 u_image1 u_image1 u_image1 u_image1 u_image1 u_image2 u_image2 u_image2 u_image2 u_image2 u_image2"
         "u_image3 u_image3 u_image3 u_image3 u_image3 u_image3 u_image4 u_image4 u_image4 u_image4 u_image4 u_image4"
         "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1"
-        "projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2";
+        "projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2"
+        "kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos";
     background-color: white; 
     justify-items: center;
     align-items: center;
