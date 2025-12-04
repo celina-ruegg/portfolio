@@ -44,6 +44,11 @@ body {
     text-decoration: none; /* Entfernt den Unterstrich */
 }
 
+.header-grid__title2 a {
+    color: black;          /* Stellt sicher, dass die Textfarbe schwarz bleibt */
+    text-decoration: none; 
+}
+
 
 
 /* ===============================================================================================================*/
@@ -141,6 +146,7 @@ body {
     grid-area: title3;
     text-align: right;
 }
+
 
 /* ===============================================================================================================*/
 /* GRID-ELEMENTE (Titel) */
@@ -256,7 +262,7 @@ body {
         "f_image1 f_image1 f_image1 f_image1 f_image1 f_image1 f_image2 f_image2 f_image2 f_image2 f_image2 f_image2"
         "f_image3 f_image3 f_image3 f_image3 f_image3 f_image3 f_image4 f_image4 f_image4 f_image4 f_image4 f_image4"
         "f_image5 f_image5 f_image5 f_image5 f_image5 f_image5 f_image6 f_image6 f_image6 f_image6 f_image6 f_image6"
-        "projektbeschreib_detail1 projektbeschreib_detail1 . . . . . . . . . .";
+        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1";
     background-color: white; 
     justify-items: center;
     align-items: center;
@@ -281,7 +287,7 @@ body {
         "image6_24 image6_24 image6_24 image6_24 image6_24 image6_24 image7_24 image7_24 image7_24 image7_24 image7_24 image7_24"
         "image8_24 image8_24 image8_24 image8_24 image8_24 image8_24 image9_24 image9_24 image9_24 image9_24 image9_24 image9_24"
         "cover_24 cover_24 cover_24 cover_24 cover_24 cover_24 cover_24 cover_24 cover_24 . . ."
-        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 . . projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 . .";
+        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1";
     background-color: white;
     justify-items: center;
     align-items: center; 
@@ -307,7 +313,7 @@ body {
         "image10_paris image10_paris image10_paris image10_paris image10_paris image10_paris image11_paris image11_paris image11_paris image11_paris image11_paris image11_paris"
         "image12_paris image12_paris image12_paris image12_paris image12_paris image12_paris image12_paris image12_paris image12_paris . . ."
         "cover_paris cover_paris cover_paris cover_paris cover_paris cover_paris cover_paris cover_paris cover_paris . . ."
-        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 . . projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 . .";
+        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1";
     background-color: white; 
     justify-items: center;
     align-items: center;
@@ -333,7 +339,7 @@ body {
         "image11_london image11_london image11_london image11_london image11_london image11_london image12_london image12_london image12_london image12_london image12_london image12_london"
         "image13_london image13_london image13_london image13_london image13_london image13_london image14_london image14_london image14_london image14_london image14_london image14_london"
         "cover_london cover_london cover_london cover_london cover_london cover_london cover_london cover_london cover_london . . ."
-        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 . . projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 . .";
+        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1";
     background-color: white; 
     justify-items: center;
     align-items: center;
@@ -353,7 +359,7 @@ body {
         "motion_video1 motion_video1 motion_video1 motion_video2 motion_video2 motion_video2 motion_video3 motion_video3 motion_video3 motion_video4 motion_video4 motion_video4"
         "motion_video5 motion_video5 motion_video5 motion_video6 motion_video6 motion_video6 motion_video7 motion_video7 motion_video7 motion_video8 motion_video8 motion_video8"
         "motion_video9 motion_video9 motion_video9 motion_video10 motion_video10 motion_video10 motion_video11 motion_video11 motion_video11 motion_video12 motion_video12 motion_video12"
-        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 . . . . . .";
+        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1";
     background-color: white; 
     justify-items: center;
     align-items: center;
@@ -376,7 +382,7 @@ body {
         "i_image5 i_image5 i_image5 i_image5 i_image6 i_image6 i_image6 i_image6 i_image7 i_image7 i_image7 i_image7"
         "i_image8 i_image8 i_image8 i_image8 i_image8 i_image8 i_image9 i_image9 i_image9 i_image9 i_image9 i_image9"
         "i_image10 i_image10 i_image10 i_image10 i_image10 i_image10 i_image11 i_image11 i_image11 i_image11 i_image11 i_image11"
-        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 . . . . . .";
+        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1";
     background-color: white; 
     justify-items: center;
     align-items: center;
@@ -399,7 +405,7 @@ body {
         "z_image1 z_image1 z_image1 z_image1 z_image1 z_image1 z_image2 z_image2 z_image2 z_image2 z_image2 z_image2"
         "z_image3 z_image3 z_image3 z_image3 z_image3 z_image3 z_image4 z_image4 z_image4 z_image4 z_image4 z_image4"
         "z_image5 z_image5 z_image5 z_image5 z_image5 z_image5 . . . . . ."
-        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 . . . . . .";
+        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1";
     background-color: white; 
     justify-items: center;
     align-items: center;
@@ -481,7 +487,7 @@ body {
             "motion_video4 motion_video4 motion_video4 motion_video4 motion_video5 motion_video5 motion_video5 motion_video5 motion_video6 motion_video6 motion_video6 motion_video6"
             "motion_video7 motion_video7 motion_video7 motion_video7 motion_video8 motion_video8 motion_video8 motion_video8 motion_video9 motion_video9 motion_video9 motion_video9"
             "motion_video10 motion_video10 motion_video10 motion_video10 motion_video11 motion_video11 motion_video11 motion_video11 motion_video12 motion_video12 motion_video12 motion_video12"
-            "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 . . . . . .";
+            "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1";
     }
 
     .project-overall_london {
@@ -507,7 +513,7 @@ body {
         "f_image1 f_image1 f_image1 f_image1 f_image1 f_image1 f_image2 f_image2 f_image2 f_image2 f_image2 f_image2"
         "f_image3 f_image3 f_image3 f_image3 f_image3 f_image3 f_image4 f_image4 f_image4 f_image4 f_image4 f_image4"
         "f_image5 f_image5 f_image5 f_image5 f_image5 f_image5 f_image6 f_image6 f_image6 f_image6 f_image6 f_image6"
-        "projektbeschreib_detail1 projektbeschreib_detail1 . . . . . . . . . .";
+        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1";
     background-color: white; 
     justify-items: center;
     align-items: center;
@@ -531,7 +537,7 @@ body {
         "image6_24 image6_24 image6_24 image6_24 image6_24 image6_24 image7_24 image7_24 image7_24 image7_24 image7_24 image7_24"
         "image8_24 image8_24 image8_24 image8_24 image8_24 image8_24 image9_24 image9_24 image9_24 image9_24 image9_24 image9_24"
         "cover_24 cover_24 cover_24 cover_24 cover_24 cover_24 cover_24 cover_24 cover_24 cover_24 cover_24 cover_24"
-        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 . . projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 . .";
+        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1";
     background-color: white;
     justify-items: center;
     align-items: center; 
@@ -556,7 +562,7 @@ body {
         "image10_paris image10_paris image10_paris image10_paris image10_paris image10_paris image11_paris image11_paris image11_paris image11_paris image11_paris image11_paris"
         "image12_paris image12_paris image12_paris image12_paris image12_paris image12_paris image12_paris image12_paris image12_paris image12_paris image12_paris image12_paris"
         "cover_paris cover_paris cover_paris cover_paris cover_paris cover_paris cover_paris cover_paris cover_paris cover_paris cover_paris cover_paris"
-        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 . . projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 . .";
+        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1";
     background-color: white; 
     justify-items: center;
     align-items: center;
@@ -581,7 +587,7 @@ body {
         "image11_london image11_london image11_london image11_london image11_london image11_london image12_london image12_london image12_london image12_london image12_london image12_london"
         "image13_london image13_london image13_london image13_london image13_london image13_london image14_london image14_london image14_london image14_london image14_london image14_london"
         "cover_london cover_london cover_london cover_london cover_london cover_london cover_london cover_london cover_london cover_london cover_london cover_london"
-        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 . . projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 projektbeschreib_detail2 . .";
+        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1";
     background-color: white; 
     justify-items: center;
     align-items: center;
@@ -603,7 +609,7 @@ body {
         "i_image5 i_image5 i_image5 i_image5 i_image6 i_image6 i_image6 i_image6 i_image7 i_image7 i_image7 i_image7"
         "i_image8 i_image8 i_image8 i_image8 i_image8 i_image8 i_image9 i_image9 i_image9 i_image9 i_image9 i_image9"
         "i_image10 i_image10 i_image10 i_image10 i_image10 i_image10 i_image11 i_image11 i_image11 i_image11 i_image11 i_image11"
-        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 . . . . . .";
+        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1";
     background-color: white; 
     justify-items: center;
     align-items: center;
@@ -625,7 +631,7 @@ body {
         "z_image1 z_image1 z_image1 z_image1 z_image1 z_image1 z_image2 z_image2 z_image2 z_image2 z_image2 z_image2"
         "z_image3 z_image3 z_image3 z_image3 z_image3 z_image3 z_image4 z_image4 z_image4 z_image4 z_image4 z_image4"
         "z_image5 z_image5 z_image5 z_image5 z_image5 z_image5 . . . . . ."
-        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 . . . . . .";
+        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1";
     background-color: white; 
     justify-items: center;
     align-items: center;
