@@ -9,9 +9,14 @@
 /* Base Elements */
 /* ===============================================================================================================*/
 img{
-    max-width: 100%;
+    width: 100%;
     display: block;
 }
+video {
+    width: 100%;
+    display: block;
+}
+
 /* ===============================================================================================================*/
 /* Body */
 /* ===============================================================================================================*/
@@ -20,7 +25,8 @@ img{
 body {
     margin: 0;
     padding: 0;
-    height: 100%;
+    height: 100%; 
+    background-color: rgb(255, 255, 255);  
 
     font-family: 'Druk Wide Web';
 	font-weight: 500;
@@ -43,8 +49,8 @@ body {
     /* 12 Spalten */
     grid-template-columns: repeat(3, 1fr); 
     padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
     padding-bottom: 10px;
     gap: 10px; /* Abstand zwischen den Grid-Elementen */
     row-gap: 10px;
@@ -58,7 +64,6 @@ body {
     width: 100%;     /* 4. Lässt es die gesamte Breite des Fensters einnehmen */
     z-index: 1000;   /* 5. Sorgt dafür, dass es ÜBER allen anderen Inhalten liegt */
 }
-
 
 /* ===============================================================================================================*/
 /* HEADER-GRID-ELEMENTE (Titel) */
@@ -87,84 +92,129 @@ body {
     text-align: right;
 }
 
-
 /* ===============================================================================================================*/
-/* GRID-ELEMENTE (Titel) */
-/* ===============================================================================================================*/
-
-.zentrierter-titel_weiss {
-    font-size: clamp(20px, 10vw, 130px);
-    color: rgb(255, 255, 255);
-    grid-area: title;
-    margin-top: 0;
-    margin-bottom: 0;
-    z-index: 1;
-}
-
-.zentrierter-titel_schwarz {
-    font-size: clamp(20px, 10vw, 130px);
-    color: rgb(0, 0, 0);
-    grid-area: title;
-    margin-top: 0;
-    margin-bottom: 0;
-    z-index: 1;
-}
-
-.projektbeschreib {
-    font-size: clamp(14px, 3vw, 30px);
-    color: black;
-    grid-area: projektbeschreib;
-    padding-left: 30px;
-    padding-top: 10px;
-    padding-bottom: 20px;
-}
-
-.projektbeschreib1 {
-    font-size: clamp(14px, 3vw, 30px);
-    color: black;
-    grid-area: projektbeschreib1;
-    padding-left: 30px;
-    padding-top: 10px;
-    padding-bottom: 20px;
-}
-
-.projektbeschreib_detail1 {
-    font-size: clamp(14px, 3vw, 30px);
-    color: black;
-    grid-area: projektbeschreib_detail1;
-    padding-left: 30px;
-    padding-top: 10px;
-    padding-bottom: 20px;
-}
-
-/* =====================================================================================================================================*/
-
-/* ===============================================================================================================*/
-/* Project Grid  */
+/* Startseite Grid (Hero Section) */
 /* ===============================================================================================================*/
 
-/* fechten (Grid) */
-.project-grid__ueber-mich {
+.project-grid {
     display: grid;
-    /* 12 Spalten */
     grid-template-columns: repeat(12, 1fr); 
-     padding: 10px 0px 10px 0px; /* padding: Oben Rechts Unten Links; */
-    gap: 10px; /* Abstand zwischen den Grid-Elementen */
-    row-gap: 10px;
+    padding: 0; 
+    gap: 0; 
+    row-gap: 0;
     grid-template-areas: 
-        "title title title title title title title title title title title title"
-        "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib . . .";
-    background-color: white; 
+        "hero hero hero hero hero hero hero hero hero hero hero hero"; 
+    /* WICHTIG: Setzt den Referenzpunkt für den absolut positionierten Titel */
+    position: relative; 
+    
+    background-color: white;
+    justify-items: center;
+    align-items: center;
+}
+
+.startseite-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); 
+    padding: 0; 
+    gap: 0; 
+    row-gap: 0;
+    grid-template-areas: 
+        "zeitung-s paris-s motion-s london-s stunden fechten-s impro-s"; 
+    /* WICHTIG: Setzt den Referenzpunkt für den absolut positionierten Titel */
+    position: relative;
+    background-color: white;
     justify-items: center;
     align-items: center;
 }
 
 
+/* ======================================================================================================================================*/
+
 /* ===============================================================================================================*/
-/* GRID-ELEMENTE (Bilder) */
+/* TITEL */
 /* ===============================================================================================================*/
 
-/* fechten (Bilder) */
-.project-grid__bild {
-    grid-area: title;
+/* ===============================================================================================================*/
+/* TITEL */
+/* ===============================================================================================================*/
+
+.zentrierter-titel-startseite {
+    font-size: clamp(20px, 10vw, 130px);
+    /* NEU: Farbe auf Weiß, um auf dem Slider-Bild sichtbar zu sein */
+    color: rgb(0, 0, 0); 
+    grid-area: hero; 
+    /* WICHTIG: Auf absolute Positionierung umstellen */
+    position: absolute;
+    /* WICHTIG: Muss höher als der Slider (z-index: 1) sein */
+    z-index: 10; 
+    margin: 0;
+    text-align: center;
+    line-height: .85;
+}
+
+/* ===============================================================================================================*/
+/* SLIDER CONTAINER */
+/* ===============================================================================================================*/
+.slider-container {
+    grid-area: hero; 
+    z-index: 1; 
+    /* WICHTIG: Höhe flexibel halten, damit das Bild nicht beschnitten wird */
+    min-height: 0vh; /* Mindesthöhe für den Slider-Bereich */
+    height: auto;
+    /* Slider Funktionalität */
+    display: flex;
+    flex-wrap: nowrap; 
+    overflow-x: scroll; 
+    scroll-snap-type: x mandatory; 
+    /* Scrollbar ausblenden */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.slider-container::-webkit-scrollbar {
+    display: none; 
+}
+
+.slide {
+    /* WICHTIG: Jedes Slide muss 100% der Breite des Containers einnehmen */
+    min-width: 100%; 
+    /* Höhe auto für das Bild */
+    height: auto; 
+    scroll-snap-align: start; 
+    
+    /* Stellt sicher, dass das Bild innerhalb des Slides richtig positioniert wird */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===============================================================================================================*/
+/* Startseite (Bilder) */
+/* ===============================================================================================================*/
+
+.startseite-bild_zeitung {
+    grid-area: zeitung-s;
+}
+
+.startseite-bild_paris {
+    grid-area: paris-s;
+}
+
+.startseite-bild_motion {
+    grid-area: motion-s;
+}
+
+.startseite-bild_london {
+    grid-area: london-s;
+}
+
+.startseite-bild_24h {
+    grid-area: stunden;
+}
+
+.startseite-bild_fechten {
+    grid-area: fechten-s;
+}
+
+.startseite-bild_impro {
+    grid-area: impro-s;
 }

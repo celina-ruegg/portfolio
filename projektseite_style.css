@@ -16,6 +16,8 @@ video {
     width: 100%;
     display: block;
 }
+
+
 /* ===============================================================================================================*/
 /* Body */
 /* ===============================================================================================================*/
@@ -30,6 +32,14 @@ body {
     font-family: 'Druk Wide Web';
 	font-weight: 500;
 	font-style: normal;
+}
+
+
+/* ===============================================================================================================*/
+/* Box Sizing Reset */
+/* ===============================================================================================================*/
+*, *::before, *::after {
+    box-sizing: border-box; /* Stellt sicher, dass Padding und Border in die Breite (100%) eingerechnet werden */
 }
 /* ===============================================================================================================*/
 /* Verlinkungen Style */
@@ -52,14 +62,6 @@ body {
 .kontaktinfos a {
     color: black;          /* Stellt sicher, dass die Textfarbe schwarz bleibt */
     text-decoration: none; 
-}
-
-
-/* ===============================================================================================================*/
-/* Box Sizing Reset */
-/* ===============================================================================================================*/
-*, *::before, *::after {
-    box-sizing: border-box; /* Stellt sicher, dass Padding und Border in die Breite (100%) eingerechnet werden */
 }
 
 /* ===============================================================================================================*/
@@ -85,43 +87,6 @@ body {
     left: 0;         /* 3. Positioniert es links (Null-Abstand vom linken Rand) */
     width: 100%;     /* 4. Lässt es die gesamte Breite des Fensters einnehmen */
     z-index: 1000;   /* 5. Sorgt dafür, dass es ÜBER allen anderen Inhalten liegt */
-}
-
-/* ===============================================================================================================*/
-/* Bild-Zoom-Effekt für die Startseite */
-/* ===============================================================================================================*/
-
-/* 1. Generelle Regeln für ALLE Bilder im Project Grid */
-/* Wir verwenden den direkten Kind-Selektor (> img), um alle <img>-Elemente 
-   innerhalb der Bild-Container zu adressieren. */
-.project-grid > div > a > img {
-    /* WICHTIG: Erlaubt uns, das Bild zu vergrößern (skalieren) */
-    transform: scale(1);
-    /* WICHTIG: Sorgt für eine weiche Animation über 0.4 Sekunden */
-    transition: transform 0.4s ease-in-out;
-    /* Damit das Bild nicht aus dem umgebenden Element herausrutscht 
-       (manchmal hilfreich, je nach Container-Setup) */
-    display: block; 
-}
-
-/* 2. Effekt, wenn die Maus über das BILD oder den LINK fährt */
-.project-grid > div > a:hover > img {
-    /* Vergrößere das Bild um 5% (1.05) */
-    transform: scale(1.05);
-}
-
-/* 3. OPTIONAL: Wenn du willst, dass der umgebende DIV-Container
-   die Ränder des gezoomten Bildes abschneidet und der Hover-Effekt
-   sanfter wirkt, füge dies zu deinen Container-Klassen hinzu. 
-   (z.B. für alle Container im .project-grid) */
-.project-grid > div {
-    /* Schneidet Teile des Inhalts ab, die über den Container hinausragen */
-    overflow: hidden; 
-}
-
-/* Optional: Verändere den Mauszeiger, wenn man über den Link fährt */
-.project-grid a:hover {
-    cursor: pointer;
 }
 
 /* ===============================================================================================================*/
@@ -258,27 +223,94 @@ body {
     padding-left: 30px;
 }
 
+.zentrierter-titel-startseite {
+    font-size: clamp(20px, 10vw, 130px);
+    /* NEU: Farbe auf Weiß, um auf dem Slider-Bild sichtbar zu sein */
+    color: rgb(0, 0, 0); 
+    grid-area: hero; 
+    /* WICHTIG: Auf absolute Positionierung umstellen */
+    position: absolute;
+    /* WICHTIG: Muss höher als der Slider (z-index: 1) sein */
+    z-index: 10; 
+    margin: 0;
+    text-align: center;
+    line-height: .85;
+}
+
 /* =====================================================================================================================================*/
 
 /* ===============================================================================================================*/
-/* Startseite Grid */
+/* Startseite Grid (Hero Section) */
 /* ===============================================================================================================*/
 
 .project-grid {
     display: grid;
-    /* 12 Spalten */
     grid-template-columns: repeat(12, 1fr); 
-    padding: 30px 0px 30px 0px; /* padding: Oben Rechts Unten Links; */
-    gap: 10px; /* Abstand zwischen.zentrierter-titel_schwarz den Grid-Elementen */
-    row-gap: 10px;
+    padding: 0; 
+    gap: 0; 
+    row-gap: 0;
     grid-template-areas: 
-        "zeitung-s zeitung-s zeitung-s paris-s paris-s paris-s motion-s motion-s motion-s london-s london-s london-s"
-         "titel titel titel titel titel titel titel titel titel titel titel titel"
-        "stunden stunden stunden fechten-s fechten-s fechten-s impro-s impro-s impro-s . . .";
+        "hero hero hero hero hero hero hero hero hero hero hero hero"; 
+    /* WICHTIG: Setzt den Referenzpunkt für den absolut positionierten Titel */
+    position: relative; 
+    
     background-color: white;
     justify-items: center;
     align-items: center;
 }
+
+.startseite-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); 
+    padding: 0; 
+    gap: 0; 
+    row-gap: 0;
+    grid-template-areas: 
+        "zeitung-s paris-s motion-s london-s stunden fechten-s impro-s"; 
+    /* WICHTIG: Setzt den Referenzpunkt für den absolut positionierten Titel */
+    position: relative;
+    background-color: white;
+    justify-items: center;
+    align-items: center;
+}
+
+/* ======================================================================================================================================*/
+
+/* ===============================================================================================================*/
+/* SLIDER CONTAINER */
+/* ===============================================================================================================*/
+.slider-container {
+    grid-area: hero; 
+    z-index: 1; 
+    /* WICHTIG: Höhe flexibel halten, damit das Bild nicht beschnitten wird */
+    min-height: 0vh; /* Mindesthöhe für den Slider-Bereich */
+    height: auto;
+    /* Slider Funktionalität */
+    display: flex;
+    flex-wrap: nowrap; 
+    overflow-x: scroll; 
+    scroll-snap-type: x mandatory; 
+    /* Scrollbar ausblenden */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.slider-container::-webkit-scrollbar {
+    display: none; 
+}
+
+.slide {
+    /* WICHTIG: Jedes Slide muss 100% der Breite des Containers einnehmen */
+    min-width: 100%; 
+    /* Höhe auto für das Bild */
+    height: auto; 
+    scroll-snap-align: start; 
+    
+    /* Stellt sicher, dass das Bild innerhalb des Slides richtig positioniert wird */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
 
 /* ===============================================================================================================*/
 /* Project Grid  */
@@ -289,7 +321,7 @@ body {
     display: grid;
     /* 12 Spalten */
     grid-template-columns: repeat(12, 1fr); 
-     padding: 10px 0px 10px 0px; /* padding: Oben Rechts Unten Links; */
+    padding: 10px 0px 10px 0px; /* padding: Oben Rechts Unten Links; */
     gap: 10px; /* Abstand zwischen den Grid-Elementen */
     row-gap: 10px;
     grid-template-areas: 
