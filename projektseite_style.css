@@ -243,9 +243,10 @@ body {
 .project-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr); 
-    padding: 0; 
     gap: 0; 
     row-gap: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
     grid-template-areas: 
         "hero hero hero hero hero hero hero hero hero hero hero hero"; 
     /* WICHTIG: Setzt den Referenzpunkt für den absolut positionierten Titel */
@@ -318,7 +319,8 @@ body {
     display: grid;
     /* 12 Spalten */
     grid-template-columns: repeat(12, 1fr); 
-    padding: 10px 0px 10px 0px; /* padding: Oben Rechts Unten Links; */
+    padding-top: 10px;
+    padding-bottom: 10px;
     gap: 10px; /* Abstand zwischen den Grid-Elementen */
     row-gap: 10px;
     grid-template-areas: 
@@ -338,11 +340,11 @@ body {
     display: grid;
     /* 12 Spalten */
     grid-template-columns: repeat(12, 1fr); 
-     padding: 10px 0px 0px 0px; /* padding: Oben Rechts Unten Links; */
+    padding-top: 10px;
+    padding-bottom: 10px;
     gap: 30px; /* Abstand zwischen den Grid-Elementen */
     row-gap: 30px;
     grid-template-areas: 
-        "title1 . . . . . title2 . . . . title3"
         "title title title title title title title title title title title title"
         "detail detail detail detail detail detail detail detail detail detail detail detail"
         "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib . . ."
@@ -363,11 +365,11 @@ body {
     display: grid;
     /* 12 Spalten */
     grid-template-columns: repeat(12, 1fr); 
-     padding: 10px 0px 10px 0px; /* padding: Oben Rechts Unten Links; */
+    padding-top: 10px;
+    padding-bottom: 10px;
     gap: 30px; /* Abstand zwischen den Grid-Elementen */
     row-gap: 30px;
     grid-template-areas: 
-        "title1 . . . . . title2 . . . . title3"
         "title title title title title title title title title title title title"
         "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib . . ."
         "image1_paris image1_paris image1_paris image1_paris image1_paris image1_paris image2_paris image2_paris image2_paris image2_paris image2_paris image2_paris"
@@ -389,7 +391,8 @@ body {
     display: grid;
     /* 12 Spalten */
     grid-template-columns: repeat(12, 1fr); 
-    padding: 10px 0px 0px 0px; /* padding: Oben Rechts Unten Links; */
+    padding-top: 10px;
+    padding-bottom: 10px;
     gap: 30px; /* Abstand zwischen den Grid-Elementen */
     row-gap: 30px;
     grid-template-areas:
@@ -415,7 +418,8 @@ body {
     display: grid;
     /* 12 Spalten */
     grid-template-columns: repeat(12, 1fr); 
-     padding: 0px 0px 10px 0px; /* padding: Oben Rechts Unten Links; */
+    padding-top: 10px;
+    padding-bottom: 10px;
     gap: 10px; /* Abstand zwischen den Grid-Elementen */
     row-gap: 10px;
     grid-template-areas: 
@@ -435,7 +439,8 @@ body {
     display: grid;
     /* 12 Spalten */
     grid-template-columns: repeat(12, 1fr); 
-     padding: 10px 0px 10px 0px; /* padding: Oben Rechts Unten Links; */
+    padding-top: 10px;
+    padding-bottom: 10px;
     gap: 10px; /* Abstand zwischen den Grid-Elementen */
     row-gap: 10px;
     grid-template-areas: 
@@ -458,7 +463,8 @@ body {
     display: grid;
     /* 12 Spalten */
     grid-template-columns: repeat(12, 1fr); 
-     padding: 0px 0px 0px 0px; /* padding: Oben Rechts Unten Links; */
+    padding-top: 10px;
+    padding-bottom: 10px;
     gap: 30px; /* Abstand zwischen den Grid-Elementen */
     row-gap: 30px;
     grid-template-areas: 
@@ -481,7 +487,8 @@ body {
     display: grid;
     /* 12 Spalten */
     grid-template-columns: repeat(12, 1fr); 
-     padding: 10px 0px 10px 0px; /* padding: Oben Rechts Unten Links; */
+    padding-top: 10px;
+    padding-bottom: 10px;
     gap: 10px; /* Abstand zwischen den Grid-Elementen */
     row-gap: 10px;
     grid-template-areas: 
