@@ -321,8 +321,8 @@ body {
     /* 12 Spalten */
     grid-template-columns: repeat(12, 1fr); 
      padding: 10px 0px 10px 0px; /* padding: Oben Rechts Unten Links; */
-    gap: 10px; /* Abstand zwischen den Grid-Elementen */
-    row-gap: 10px;
+    gap: 30px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 30px;
     grid-template-areas: 
         "title title title title title title title title title title title title"
         "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib . . ."
@@ -346,7 +346,6 @@ body {
     row-gap: 30px;
     grid-template-areas: 
         "title title title title title title title title title title title title"
-        "detail detail detail detail detail detail detail detail detail detail detail detail"
         "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib . . ."
         "image1_24 image1_24 image1_24 image1_24 image1_24 image1_24 image2_24 image2_24 image2_24 image2_24 image2_24 image2_24"
         "image3_24 image3_24 image3_24 image3_24 image3_24 image3_24 image4_24 image4_24 image4_24 image4_24 image4_24 image4_24"
@@ -418,8 +417,8 @@ body {
     display: grid;
     grid-template-columns: repeat(12, 1fr); 
      padding: 0px 0px 10px 0px; /* padding: Oben Rechts Unten Links; */
-    gap: 10px; /* Abstand zwischen den Grid-Elementen */
-    row-gap: 10px;
+    gap: 30px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 30px;
     grid-template-areas: 
         "title title title title title title title title title title title title"
         "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib . . ."
@@ -439,8 +438,8 @@ body {
     grid-template-columns: repeat(12, 1fr); 
     padding-top: 10px;
     padding-bottom: 10px;
-    gap: 10px; /* Abstand zwischen den Grid-Elementen */
-    row-gap: 10px;
+    gap: 30px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 30px;
     grid-template-areas: 
         "title title title title title title title title title title title title"
         "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib . . ."
@@ -552,7 +551,11 @@ body {
 
     /* 1. ANPASSUNG DER GRID-ELEMENTE (motion) */
     .project-grid__motion {
-        /* Hier bleibt die Spaltenanzahl 12, aber wir vergrößern die Areas! */
+        display: grid;
+        grid-template-columns: repeat(12, 1fr); 
+        padding: 0px 0px 15px 0px; /* padding: Oben Rechts Unten Links; */
+        gap: 15px; /* Abstand zwischen den Grid-Elementen */
+        row-gap: 15px;
         grid-template-areas: 
             "title title title title title title title title title title title title"
             "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib ."
@@ -577,9 +580,9 @@ body {
     display: grid;
     /* 12 Spalten */
     grid-template-columns: repeat(12, 1fr); 
-     padding: 10px 0px 10px 0px; /* padding: Oben Rechts Unten Links; */
-    gap: 10px; /* Abstand zwischen den Grid-Elementen */
-    row-gap: 10px;
+    padding: 0px 0px 15px 0px; /* padding: Oben Rechts Unten Links; */
+    gap: 15px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 15px;
     grid-template-areas: 
         "title title title title title title title title title title title title"
         "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib ."
@@ -596,13 +599,11 @@ body {
     display: grid;
     /* 12 Spalten */
     grid-template-columns: repeat(12, 1fr); 
-     padding: 10px 0px 0px 0px; /* padding: Oben Rechts Unten Links; */
+     padding: 0px 0px 15px 0px; /* padding: Oben Rechts Unten Links; */
     gap: 15px; /* Abstand zwischen den Grid-Elementen */
     row-gap: 15px;
     grid-template-areas: 
-        "title1 . . . . . title2 . . . . title3"
         "title title title title title title title title title title title title"
-        "detail detail detail detail detail detail detail detail detail detail detail detail"
         "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib ."
         "image1_24 image1_24 image1_24 image1_24 image1_24 image1_24 image2_24 image2_24 image2_24 image2_24 image2_24 image2_24"
         "image3_24 image3_24 image3_24 image3_24 image3_24 image3_24 image4_24 image4_24 image4_24 image4_24 image4_24 image4_24"
@@ -620,11 +621,10 @@ body {
     display: grid;
     /* 12 Spalten */
     grid-template-columns: repeat(12, 1fr); 
-     padding: 10px 0px 10px 0px; /* padding: Oben Rechts Unten Links; */
+     padding: 0px 0px 15px 0px; /* padding: Oben Rechts Unten Links; */
     gap: 15px; /* Abstand zwischen den Grid-Elementen */
     row-gap: 15px;
     grid-template-areas: 
-        "title1 . . . . . title2 . . . . title3"
         "title title title title title title title title title title title title"
         "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib ."
         "image1_paris image1_paris image1_paris image1_paris image1_paris image1_paris image2_paris image2_paris image2_paris image2_paris image2_paris image2_paris"
@@ -645,7 +645,7 @@ body {
     display: grid;
     /* 12 Spalten */
     grid-template-columns: repeat(12, 1fr); 
-    padding: 10px 0px 0px 0px; /* padding: Oben Rechts Unten Links; */
+    padding: 0px 0px 15px 0px; /* padding: Oben Rechts Unten Links; */
     gap: 15px; /* Abstand zwischen den Grid-Elementen */
     row-gap: 15px;
     grid-template-areas:
@@ -670,9 +670,9 @@ body {
     display: grid;
     /* 12 Spalten */
     grid-template-columns: repeat(12, 1fr); 
-     padding: 10px 0px 10px 0px; /* padding: Oben Rechts Unten Links; */
-    gap: 10px; /* Abstand zwischen den Grid-Elementen */
-    row-gap: 10px;
+     padding: 0px 0px 15px 0px; /* padding: Oben Rechts Unten Links; */
+    gap: 15x; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 15px;
     grid-template-areas: 
         "title title title title title title title title title title title title"
         "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib ."
@@ -692,7 +692,7 @@ body {
     display: grid;
     /* 12 Spalten */
     grid-template-columns: repeat(12, 1fr); 
-     padding: 0px 0px 0px 0px; /* padding: Oben Rechts Unten Links; */
+    padding: 0px 0px 15px 0px; /* padding: Oben Rechts Unten Links; */
     gap: 15px; /* Abstand zwischen den Grid-Elementen */
     row-gap: 15px;
     grid-template-areas: 
@@ -714,9 +714,9 @@ body {
     display: grid;
     /* 12 Spalten */
     grid-template-columns: repeat(12, 1fr); 
-     padding: 10px 0px 10px 0px; /* padding: Oben Rechts Unten Links; */
-    gap: 10px; /* Abstand zwischen den Grid-Elementen */
-    row-gap: 10px;
+    padding: 10px 0px 10px 0px; /* padding: Oben Rechts Unten Links; */
+    gap: 15px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 15px;
     grid-template-areas: 
         "title title title title title title title title title title title title"
         "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib ."
@@ -731,39 +731,6 @@ body {
 }
 
 @media (max-width: 768px) {
-    
-    .project-grid {
-        /* Die Spaltenbasis von 12 bleibt, aber wir nutzen sie anders */
-        
-        /* NEUE LAYOUT-DEFINITION FÜR MOBILE: */
-        grid-template-areas: 
-            /* 1. Zeile: 2 Bilder, jedes 6 Spalten breit (6 + 6 = 12) */
-            "zeitung-s zeitung-s zeitung-s zeitung-s zeitung-s zeitung-s paris-s paris-s paris-s paris-s paris-s paris-s"
-            
-            /* 2. Zeile: 2 weitere Bilder, jedes 6 Spalten breit */
-            "motion-s motion-s motion-s motion-s motion-s motion-s london-s london-s london-s london-s london-s london-s"
-            
-            /* 3. Zeile: Der Titel über die volle Breite (12 Spalten) */
-            "titel titel titel titel titel titel titel titel titel titel titel titel"
-            
-            /* 4. Zeile: Die letzten beiden Bilder, jedes 6 Spalten breit */
-            "stunden stunden stunden stunden stunden stunden fechten-s fechten-s fechten-s fechten-s fechten-s fechten-s"
-            
-            /* Die letzte Area 'impro-s' braucht eine neue Zeile, da in der vorigen kein Platz mehr ist. 
-               Oder, falls das Grid-Design nur 4 Bilder (Zeitung/Paris/Motion/London) + Titel + 3 (Stunden/Fechten/Impro) vorsieht, 
-               müssen wir es auf 2er-Gruppen anpassen: */
-
-            /* KORRIGIERTE 4. Zeile: Stunden/Fechten, je 6 Spalten breit */
-            "stunden stunden stunden stunden stunden stunden fechten-s fechten-s fechten-s fechten-s fechten-s fechten-s"
-            
-            /* 5. Zeile: Impro und eine leere 6-Spalten-Area (falls nur 1 Bild übrig ist) */
-            "impro-s impro-s impro-s impro-s impro-s impro-s . . . . . ."; 
-            
-        /* Reduzieren Sie optional die Abstände für Mobilgeräte */
-        padding: 10px 0px; 
-        gap: 5px;
-        row-gap: 5px;
-    }
 
     .zentrierter-titel_schwarz {
         /* WICHTIG: Die Textzentrierung und nowrap müssen hier oder in der Basis-Definition stehen */
