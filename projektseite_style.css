@@ -16,6 +16,8 @@ video {
     width: 100%;
     display: block;
 }
+
+
 /* ===============================================================================================================*/
 /* Body */
 /* ===============================================================================================================*/
@@ -30,6 +32,14 @@ body {
     font-family: 'Druk Wide Web';
 	font-weight: 500;
 	font-style: normal;
+}
+
+
+/* ===============================================================================================================*/
+/* Box Sizing Reset */
+/* ===============================================================================================================*/
+*, *::before, *::after {
+    box-sizing: border-box; /* Stellt sicher, dass Padding und Border in die Breite (100%) eingerechnet werden */
 }
 /* ===============================================================================================================*/
 /* Verlinkungen Style */
@@ -52,14 +62,6 @@ body {
 .kontaktinfos a {
     color: black;          /* Stellt sicher, dass die Textfarbe schwarz bleibt */
     text-decoration: none; 
-}
-
-
-/* ===============================================================================================================*/
-/* Box Sizing Reset */
-/* ===============================================================================================================*/
-*, *::before, *::after {
-    box-sizing: border-box; /* Stellt sicher, dass Padding und Border in die Breite (100%) eingerechnet werden */
 }
 
 /* ===============================================================================================================*/
@@ -85,43 +87,6 @@ body {
     left: 0;         /* 3. Positioniert es links (Null-Abstand vom linken Rand) */
     width: 100%;     /* 4. Lässt es die gesamte Breite des Fensters einnehmen */
     z-index: 1000;   /* 5. Sorgt dafür, dass es ÜBER allen anderen Inhalten liegt */
-}
-
-/* ===============================================================================================================*/
-/* Bild-Zoom-Effekt für die Startseite */
-/* ===============================================================================================================*/
-
-/* 1. Generelle Regeln für ALLE Bilder im Project Grid */
-/* Wir verwenden den direkten Kind-Selektor (> img), um alle <img>-Elemente 
-   innerhalb der Bild-Container zu adressieren. */
-.project-grid > div > a > img {
-    /* WICHTIG: Erlaubt uns, das Bild zu vergrößern (skalieren) */
-    transform: scale(1);
-    /* WICHTIG: Sorgt für eine weiche Animation über 0.4 Sekunden */
-    transition: transform 0.4s ease-in-out;
-    /* Damit das Bild nicht aus dem umgebenden Element herausrutscht 
-       (manchmal hilfreich, je nach Container-Setup) */
-    display: block; 
-}
-
-/* 2. Effekt, wenn die Maus über das BILD oder den LINK fährt */
-.project-grid > div > a:hover > img {
-    /* Vergrößere das Bild um 5% (1.05) */
-    transform: scale(1.05);
-}
-
-/* 3. OPTIONAL: Wenn du willst, dass der umgebende DIV-Container
-   die Ränder des gezoomten Bildes abschneidet und der Hover-Effekt
-   sanfter wirkt, füge dies zu deinen Container-Klassen hinzu. 
-   (z.B. für alle Container im .project-grid) */
-.project-grid > div {
-    /* Schneidet Teile des Inhalts ab, die über den Container hinausragen */
-    overflow: hidden; 
-}
-
-/* Optional: Verändere den Mauszeiger, wenn man über den Link fährt */
-.project-grid a:hover {
-    cursor: pointer;
 }
 
 /* ===============================================================================================================*/
@@ -194,8 +159,6 @@ body {
     font-size: clamp(14px, 3vw, 30px);
     color: black;
     grid-area: projektbeschreib;
-    padding-top: 10px;
-    padding-bottom: 10px;
     padding-left: 30px;
 }
 
@@ -203,8 +166,6 @@ body {
     font-size: clamp(14px, 3vw, 30px);
     color: black;
     grid-area: projektbeschreib1;
-    padding-top: 10px;
-    padding-bottom: 10px;
     padding-left: 30px;
 }
 
@@ -212,40 +173,45 @@ body {
     font-size: clamp(14px, 3vw, 20px);
     color: black;
     grid-area: projektbeschreib_detail1;
-    padding-top: 10px;
-    padding-bottom: 20px;
     justify-self: start;
     padding-left: 30px;
+    padding-bottom: 20px;
 }
 
 .projektbeschreib_detail2 {
     font-size: clamp(14px, 3vw, 20px);
     color: black;
     grid-area: projektbeschreib_detail2;
-    padding-top: 10px;
-    padding-bottom: 20px;
     justify-self: start;
     padding-left: 30px;
+    padding-bottom: 20px;
 }
 
 .projektbeschreib_detail3 {
     font-size: clamp(14px, 3vw, 30px);
     color: black;
     grid-area: projektbeschreib_detail3;
-    padding-top: 10px;
-    padding-bottom: 20px;
     justify-self: start;
     padding-left: 30px;
+    padding-bottom: 20px;
 }
 
 .projektbeschreib_detail4 {
     font-size: clamp(14px, 3vw, 30px);
     color: black;
     grid-area: projektbeschreib_detail4;
-    padding-top: 10px;
-    padding-bottom: 20px;
     justify-self: start;
     padding-left: 30px;
+    padding-bottom: 20px;
+}
+
+.projektbeschreib_detail {
+    font-size: clamp(14px, 3vw, 30px);
+    color: black;
+    grid-area: projektbeschreib_detail4;
+    justify-self: start;
+    padding-left: 30px;
+    padding-bottom: 20px;
 }
 
 .kontaktinfos {
@@ -258,27 +224,92 @@ body {
     padding-left: 30px;
 }
 
+.zentrierter-titel-startseite {
+    font-size: clamp(20px, 10vw, 130px);
+    /* NEU: Farbe auf Weiß, um auf dem Slider-Bild sichtbar zu sein */
+    color: rgb(0, 0, 0); 
+    grid-area: hero; 
+    z-index: 10; 
+    margin: 0;
+    text-align: center;
+    line-height: .85;
+}
+
 /* =====================================================================================================================================*/
 
 /* ===============================================================================================================*/
-/* Startseite Grid */
+/* Startseite Grid (Hero Section) */
 /* ===============================================================================================================*/
 
 .project-grid {
     display: grid;
-    /* 12 Spalten */
     grid-template-columns: repeat(12, 1fr); 
-    padding: 30px 0px 30px 0px; /* padding: Oben Rechts Unten Links; */
-    gap: 10px; /* Abstand zwischen.zentrierter-titel_schwarz den Grid-Elementen */
-    row-gap: 10px;
+    gap: 0; 
+    row-gap: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
     grid-template-areas: 
-        "zeitung-s zeitung-s zeitung-s paris-s paris-s paris-s motion-s motion-s motion-s london-s london-s london-s"
-         "titel titel titel titel titel titel titel titel titel titel titel titel"
-        "stunden stunden stunden fechten-s fechten-s fechten-s impro-s impro-s impro-s . . .";
+        "hero hero hero hero hero hero hero hero hero hero hero hero"; 
+    /* WICHTIG: Setzt den Referenzpunkt für den absolut positionierten Titel */
+    position: relative; 
+    
     background-color: white;
     justify-items: center;
     align-items: center;
 }
+
+.startseite-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); 
+    padding: 0; 
+    gap: 0; 
+    row-gap: 0;
+    grid-template-areas: 
+        "zeitung-s paris-s motion-s london-s impro-s fechten-s stunden"; 
+    /* WICHTIG: Setzt den Referenzpunkt für den absolut positionierten Titel */
+    position: relative;
+    background-color: white;
+    justify-items: center;
+    align-items: center;
+}
+
+/* ======================================================================================================================================*/
+
+/* ===============================================================================================================*/
+/* SLIDER CONTAINER */
+/* ===============================================================================================================*/
+.slider-container {
+    grid-area: hero; 
+    z-index: 1; 
+    /* WICHTIG: Höhe flexibel halten, damit das Bild nicht beschnitten wird */
+    min-height: 0vh; /* Mindesthöhe für den Slider-Bereich */
+    height: auto;
+    /* Slider Funktionalität */
+    display: flex;
+    flex-wrap: nowrap; 
+    overflow-x: scroll; 
+    scroll-snap-type: x mandatory; 
+    /* Scrollbar ausblenden */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.slider-container::-webkit-scrollbar {
+    display: none; 
+}
+
+.slide {
+    /* WICHTIG: Jedes Slide muss 100% der Breite des Containers einnehmen */
+    min-width: 100%; 
+    /* Höhe auto für das Bild */
+    height: auto; 
+    scroll-snap-align: start; 
+    
+    /* Stellt sicher, dass das Bild innerhalb des Slides richtig positioniert wird */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
 
 /* ===============================================================================================================*/
 /* Project Grid  */
@@ -289,9 +320,10 @@ body {
     display: grid;
     /* 12 Spalten */
     grid-template-columns: repeat(12, 1fr); 
-     padding: 10px 0px 10px 0px; /* padding: Oben Rechts Unten Links; */
-    gap: 10px; /* Abstand zwischen den Grid-Elementen */
-    row-gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    gap: 30px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 30px;
     grid-template-areas: 
         "title title title title title title title title title title title title"
         "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib . . ."
@@ -309,11 +341,11 @@ body {
     display: grid;
     /* 12 Spalten */
     grid-template-columns: repeat(12, 1fr); 
-     padding: 10px 0px 0px 0px; /* padding: Oben Rechts Unten Links; */
-    gap: 10px; /* Abstand zwischen den Grid-Elementen */
-    row-gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    gap: 30px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 30px;
     grid-template-areas: 
-        "title1 . . . . . title2 . . . . title3"
         "title title title title title title title title title title title title"
         "detail detail detail detail detail detail detail detail detail detail detail detail"
         "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib . . ."
@@ -334,11 +366,11 @@ body {
     display: grid;
     /* 12 Spalten */
     grid-template-columns: repeat(12, 1fr); 
-     padding: 10px 0px 10px 0px; /* padding: Oben Rechts Unten Links; */
-    gap: 10px; /* Abstand zwischen den Grid-Elementen */
-    row-gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    gap: 30px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 30px;
     grid-template-areas: 
-        "title1 . . . . . title2 . . . . title3"
         "title title title title title title title title title title title title"
         "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib . . ."
         "image1_paris image1_paris image1_paris image1_paris image1_paris image1_paris image2_paris image2_paris image2_paris image2_paris image2_paris image2_paris"
@@ -360,9 +392,10 @@ body {
     display: grid;
     /* 12 Spalten */
     grid-template-columns: repeat(12, 1fr); 
-    padding: 10px 0px 0px 0px; /* padding: Oben Rechts Unten Links; */
-    gap: 10px; /* Abstand zwischen den Grid-Elementen */
-    row-gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    gap: 30px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 30px;
     grid-template-areas:
         "title title title title title title title title title title title title"
         "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib . . ."
@@ -384,11 +417,9 @@ body {
 /* motion (Grid) */
 .project-grid__motion {
     display: grid;
-    /* 12 Spalten */
     grid-template-columns: repeat(12, 1fr); 
-     padding: 0px 0px 10px 0px; /* padding: Oben Rechts Unten Links; */
-    gap: 10px; /* Abstand zwischen den Grid-Elementen */
-    row-gap: 10px;
+    gap: 30px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 30px;
     grid-template-areas: 
         "title title title title title title title title title title title title"
         "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib . . ."
@@ -406,7 +437,8 @@ body {
     display: grid;
     /* 12 Spalten */
     grid-template-columns: repeat(12, 1fr); 
-     padding: 10px 0px 10px 0px; /* padding: Oben Rechts Unten Links; */
+    padding-top: 10px;
+    padding-bottom: 10px;
     gap: 10px; /* Abstand zwischen den Grid-Elementen */
     row-gap: 10px;
     grid-template-areas: 
@@ -429,9 +461,10 @@ body {
     display: grid;
     /* 12 Spalten */
     grid-template-columns: repeat(12, 1fr); 
-     padding: 0px 0px 0px 0px; /* padding: Oben Rechts Unten Links; */
-    gap: 10px; /* Abstand zwischen den Grid-Elementen */
-    row-gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    gap: 30px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 30px;
     grid-template-areas: 
         "title title title title title title title title title title title title"
         "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib . . ."
@@ -452,9 +485,10 @@ body {
     display: grid;
     /* 12 Spalten */
     grid-template-columns: repeat(12, 1fr); 
-     padding: 10px 0px 10px 0px; /* padding: Oben Rechts Unten Links; */
-    gap: 10px; /* Abstand zwischen den Grid-Elementen */
-    row-gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    gap: 30px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 30px;
     grid-template-areas: 
         "title title title title title title title title title title title title"
         "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib . . ."
@@ -563,8 +597,8 @@ body {
     /* 12 Spalten */
     grid-template-columns: repeat(12, 1fr); 
      padding: 10px 0px 0px 0px; /* padding: Oben Rechts Unten Links; */
-    gap: 10px; /* Abstand zwischen den Grid-Elementen */
-    row-gap: 10px;
+    gap: 15px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 15px;
     grid-template-areas: 
         "title1 . . . . . title2 . . . . title3"
         "title title title title title title title title title title title title"
@@ -587,8 +621,8 @@ body {
     /* 12 Spalten */
     grid-template-columns: repeat(12, 1fr); 
      padding: 10px 0px 10px 0px; /* padding: Oben Rechts Unten Links; */
-    gap: 10px; /* Abstand zwischen den Grid-Elementen */
-    row-gap: 10px;
+    gap: 15px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 15px;
     grid-template-areas: 
         "title1 . . . . . title2 . . . . title3"
         "title title title title title title title title title title title title"
@@ -612,8 +646,8 @@ body {
     /* 12 Spalten */
     grid-template-columns: repeat(12, 1fr); 
     padding: 10px 0px 0px 0px; /* padding: Oben Rechts Unten Links; */
-    gap: 10px; /* Abstand zwischen den Grid-Elementen */
-    row-gap: 10px;
+    gap: 15px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 15px;
     grid-template-areas:
         "title title title title title title title title title title title title"
         "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib ."
@@ -659,8 +693,8 @@ body {
     /* 12 Spalten */
     grid-template-columns: repeat(12, 1fr); 
      padding: 0px 0px 0px 0px; /* padding: Oben Rechts Unten Links; */
-    gap: 10px; /* Abstand zwischen den Grid-Elementen */
-    row-gap: 10px;
+    gap: 15px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 15px;
     grid-template-areas: 
         "title title title title title title title title title title title title"
         "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib ."
@@ -751,6 +785,16 @@ body {
         font-size: clamp(20px, 6vw, 130px); 
     }
 
+    .zentrierter-titel-startseite {
+        /* WICHTIG: Die Textzentrierung und nowrap müssen hier oder in der Basis-Definition stehen */
+        white-space: nowrap; 
+        text-align: center;
+        
+        /* Den Skalierungsfaktor von 10vw auf 6vw reduzieren */
+        /* Dadurch wird die Schrift auf kleinen Bildschirmen deutlich kleiner und passt in eine Zeile. */
+        font-size: clamp(20px, 6vw, 130px); 
+    }
+
     .zentrierter-titel {  
         /* Optional: Reduzieren Sie den Skalierungsfaktor für kleine Bildschirme weiter, 
            falls der Titel zu weit über den Rand ragt. */
@@ -758,6 +802,36 @@ body {
     }
 
 } 
+}
+
+@media (max-width: 768px) {
+    .project-grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr); 
+        padding: 0; 
+        gap: 0; 
+        row-gap: 0;
+        grid-template-areas: 
+        "hero hero hero hero hero hero hero hero hero hero hero hero"; 
+        /* WICHTIG: Setzt den Referenzpunkt für den absolut positionierten Titel */
+        position: relative; 
+        background-color: white;
+        justify-items: center;
+        align-items: center;
+    }
+
+    /* 3. STARTSEITE-GRID ANPASSUNG */
+    .startseite-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 15px; 
+        gap: 10px; 
+        row-gap: 10px;
+        grid-template-areas: 
+            "zeitung-s paris-s" 
+            "london-s motion-s"
+            "impro-s fechten-s"
+            "stunden .";
+    }
 }
 
 /* ===============================================================================================================*/
