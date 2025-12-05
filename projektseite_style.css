@@ -320,10 +320,9 @@ body {
     display: grid;
     /* 12 Spalten */
     grid-template-columns: repeat(12, 1fr); 
-    padding-top: 10px;
-    padding-bottom: 10px;
-    gap: 30px; /* Abstand zwischen den Grid-Elementen */
-    row-gap: 30px;
+     padding: 10px 0px 10px 0px; /* padding: Oben Rechts Unten Links; */
+    gap: 10px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 10px;
     grid-template-areas: 
         "title title title title title title title title title title title title"
         "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib . . ."
@@ -418,8 +417,9 @@ body {
 .project-grid__motion {
     display: grid;
     grid-template-columns: repeat(12, 1fr); 
-    gap: 30px; /* Abstand zwischen den Grid-Elementen */
-    row-gap: 30px;
+     padding: 0px 0px 10px 0px; /* padding: Oben Rechts Unten Links; */
+    gap: 10px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 10px;
     grid-template-areas: 
         "title title title title title title title title title title title title"
         "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib . . ."
