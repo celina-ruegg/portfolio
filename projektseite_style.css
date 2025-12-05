@@ -159,8 +159,6 @@ body {
     font-size: clamp(14px, 3vw, 30px);
     color: black;
     grid-area: projektbeschreib;
-    padding-top: 10px;
-    padding-bottom: 10px;
     padding-left: 30px;
 }
 
@@ -168,8 +166,6 @@ body {
     font-size: clamp(14px, 3vw, 30px);
     color: black;
     grid-area: projektbeschreib1;
-    padding-top: 10px;
-    padding-bottom: 10px;
     padding-left: 30px;
 }
 
@@ -177,40 +173,45 @@ body {
     font-size: clamp(14px, 3vw, 20px);
     color: black;
     grid-area: projektbeschreib_detail1;
-    padding-top: 10px;
-    padding-bottom: 20px;
     justify-self: start;
     padding-left: 30px;
+    padding-bottom: 20px;
 }
 
 .projektbeschreib_detail2 {
     font-size: clamp(14px, 3vw, 20px);
     color: black;
     grid-area: projektbeschreib_detail2;
-    padding-top: 10px;
-    padding-bottom: 20px;
     justify-self: start;
     padding-left: 30px;
+    padding-bottom: 20px;
 }
 
 .projektbeschreib_detail3 {
     font-size: clamp(14px, 3vw, 30px);
     color: black;
     grid-area: projektbeschreib_detail3;
-    padding-top: 10px;
-    padding-bottom: 20px;
     justify-self: start;
     padding-left: 30px;
+    padding-bottom: 20px;
 }
 
 .projektbeschreib_detail4 {
     font-size: clamp(14px, 3vw, 30px);
     color: black;
     grid-area: projektbeschreib_detail4;
-    padding-top: 10px;
-    padding-bottom: 20px;
     justify-self: start;
     padding-left: 30px;
+    padding-bottom: 20px;
+}
+
+.projektbeschreib_detail {
+    font-size: clamp(14px, 3vw, 30px);
+    color: black;
+    grid-area: projektbeschreib_detail4;
+    justify-self: start;
+    padding-left: 30px;
+    padding-bottom: 20px;
 }
 
 .kontaktinfos {
@@ -416,10 +417,7 @@ body {
 /* motion (Grid) */
 .project-grid__motion {
     display: grid;
-    /* 12 Spalten */
     grid-template-columns: repeat(12, 1fr); 
-    padding-top: 10px;
-    padding-bottom: 10px;
     gap: 10px; /* Abstand zwischen den Grid-Elementen */
     row-gap: 10px;
     grid-template-areas: 
@@ -489,8 +487,8 @@ body {
     grid-template-columns: repeat(12, 1fr); 
     padding-top: 10px;
     padding-bottom: 10px;
-    gap: 10px; /* Abstand zwischen den Grid-Elementen */
-    row-gap: 10px;
+    gap: 30px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 30px;
     grid-template-areas: 
         "title title title title title title title title title title title title"
         "projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib projektbeschreib . . ."
