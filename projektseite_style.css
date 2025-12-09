@@ -205,6 +205,15 @@ body {
     padding-bottom: 20px;
 }
 
+.projektbeschreib_impressum {
+    font-size: clamp(14px, 3vw, 30px);
+    color: black;
+    grid-area: projektbeschreib_impressum;
+    justify-self: start;
+    padding-left: 30px;
+    padding-bottom: 20px;
+}
+
 .projektbeschreib_detail {
     font-size: clamp(14px, 3vw, 30px);
     color: black;
@@ -494,7 +503,8 @@ body {
         "u_image1 u_image1 u_image1 u_image2 u_image2 u_image2 u_image3 u_image3 u_image3 u_image4 u_image4 u_image4"
         "projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3"
         "projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4"
-        "kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos";
+        "kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos"
+        "projektbeschreib_impressum projektbeschreib_impressum projektbeschreib_impressum projektbeschreib_impressum projektbeschreib_impressum projektbeschreib_impressum projektbeschreib_impressum projektbeschreib_impressum projektbeschreib_impressum projektbeschreib_impressum projektbeschreib_impressum projektbeschreib_impressum";
     background-color: white; 
     justify-items: center;
     align-items: center;
@@ -724,7 +734,8 @@ body {
         "u_image3 u_image3 u_image3 u_image3 u_image3 u_image3 u_image4 u_image4 u_image4 u_image4 u_image4 u_image4"
         "projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3 projektbeschreib_detail3"
         "projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4 projektbeschreib_detail4"
-        "kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos";
+        "kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos kontaktinfos"
+        "projektbeschreib_impressum projektbeschreib_impressum projektbeschreib_impressum projektbeschreib_impressum projektbeschreib_impressum projektbeschreib_impressum projektbeschreib_impressum projektbeschreib_impressum projektbeschreib_impressum projektbeschreib_impressum projektbeschreib_impressum projektbeschreib_impressum";
     background-color: white; 
     justify-items: center;
     align-items: center;
