@@ -282,6 +282,8 @@ body {
     align-items: center;
 }
 
+
+
 /* ======================================================================================================================================*/
 
 /* ===============================================================================================================*/
@@ -338,7 +340,8 @@ body {
         "f_image1 f_image1 f_image1 f_image1 f_image1 f_image1 f_image2 f_image2 f_image2 f_image2 f_image2 f_image2"
         "f_image3 f_image3 f_image3 f_image3 f_image3 f_image3 f_image4 f_image4 f_image4 f_image4 f_image4 f_image4"
         "f_image5 f_image5 f_image5 f_image5 f_image5 f_image5 f_image6 f_image6 f_image6 f_image6 f_image6 f_image6"
-        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1";
+        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1"
+        "zeitung-s zeitung-s paris-s paris-s motion-s motion-s london-s london-s impro-s impro-s stunden stunden";
     background-color: white; 
     justify-items: center;
     align-items: center;
@@ -362,7 +365,8 @@ body {
         "image6_24 image6_24 image6_24 image6_24 image6_24 image6_24 image7_24 image7_24 image7_24 image7_24 image7_24 image7_24"
         "image8_24 image8_24 image8_24 image8_24 image8_24 image8_24 image9_24 image9_24 image9_24 image9_24 image9_24 image9_24"
         "cover_24 cover_24 cover_24 cover_24 cover_24 cover_24 cover_24 cover_24 cover_24 . . ."
-        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1";
+        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1"
+        "zeitung-s zeitung-s paris-s paris-s motion-s motion-s london-s london-s impro-s impro-s fechten-s fechten-s";
     background-color: white;
     justify-items: center;
     align-items: center; 
@@ -388,7 +392,8 @@ body {
         "image10_paris image10_paris image10_paris image10_paris image10_paris image10_paris image11_paris image11_paris image11_paris image11_paris image11_paris image11_paris"
         "image12_paris image12_paris image12_paris image12_paris image12_paris image12_paris image12_paris image12_paris image12_paris . . ."
         "cover_paris cover_paris cover_paris cover_paris cover_paris cover_paris cover_paris cover_paris cover_paris . . ."
-        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1";
+        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1"
+        "zeitung-s zeitung-s motion-s motion-s london-s london-s impro-s impro-s fechten-s fechten-s stunden stunden";
     background-color: white; 
     justify-items: center;
     align-items: center;
@@ -421,6 +426,21 @@ body {
     align-items: center;
 }
 
+.london-grid_ende {
+    display: grid;
+    /* 12 Spalten */
+    grid-template-columns: repeat(6, 1fr); 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    gap: 30px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 30px;
+    grid-template-areas:
+        "zeitung-s paris-s motion-s impro-s fechten-s stunden";
+    background-color: white; 
+    justify-items: center;
+    align-items: center;
+}
+
 /* motion (Grid) */
 .project-grid__motion {
     display: grid;
@@ -434,7 +454,8 @@ body {
         "motion_video1 motion_video1 motion_video1 motion_video2 motion_video2 motion_video2 motion_video3 motion_video3 motion_video3 motion_video4 motion_video4 motion_video4"
         "motion_video5 motion_video5 motion_video5 motion_video6 motion_video6 motion_video6 motion_video7 motion_video7 motion_video7 motion_video8 motion_video8 motion_video8"
         "motion_video9 motion_video9 motion_video9 motion_video10 motion_video10 motion_video10 motion_video11 motion_video11 motion_video11 motion_video12 motion_video12 motion_video12"
-        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1";
+        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1"
+        "zeitung-s zeitung-s paris-s paris-s london-s london-s impro-s impro-s fechten-s fechten-s stunden stunden";
     background-color: white; 
     justify-items: center;
     align-items: center;
@@ -458,7 +479,8 @@ body {
         "i_image5 i_image5 i_image5 i_image5 i_image6 i_image6 i_image6 i_image6 i_image7 i_image7 i_image7 i_image7"
         "i_image8 i_image8 i_image8 i_image8 i_image8 i_image8 i_image9 i_image9 i_image9 i_image9 i_image9 i_image9"
         "i_image10 i_image10 i_image10 i_image10 i_image10 i_image10 i_image11 i_image11 i_image11 i_image11 i_image11 i_image11"
-        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1";
+        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1"
+        "zeitung-s zeitung-s paris-s paris-s motion-s motion-s london-s london-s fechten-s fechten-s stunden stunden";
     background-color: white; 
     justify-items: center;
     align-items: center;
@@ -482,7 +504,8 @@ body {
         "z_image1 z_image1 z_image1 z_image1 z_image1 z_image1 z_image2 z_image2 z_image2 z_image2 z_image2 z_image2"
         "z_image3 z_image3 z_image3 z_image3 z_image3 z_image3 z_image4 z_image4 z_image4 z_image4 z_image4 z_image4"
         "z_image5 z_image5 z_image5 z_image5 z_image5 z_image5 . . . . . ."
-        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1";
+        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1"
+        "paris-s paris-s motion-s motion-s london-s london-s impro-s impro-s fechten-s fechten-s stunden stunden";
     background-color: white; 
     justify-items: center;
     align-items: center;
@@ -573,7 +596,10 @@ body {
             "motion_video4 motion_video4 motion_video4 motion_video4 motion_video5 motion_video5 motion_video5 motion_video5 motion_video6 motion_video6 motion_video6 motion_video6"
             "motion_video7 motion_video7 motion_video7 motion_video7 motion_video8 motion_video8 motion_video8 motion_video8 motion_video9 motion_video9 motion_video9 motion_video9"
             "motion_video10 motion_video10 motion_video10 motion_video10 motion_video11 motion_video11 motion_video11 motion_video11 motion_video12 motion_video12 motion_video12 motion_video12"
-            "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1";
+            "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1"
+            "zeitung-s zeitung-s zeitung-s zeitung-s zeitung-s zeitung-s paris-s paris-s paris-s paris-s paris-s paris-s"
+            "london-s london-s london-s london-s london-s london-s impro-s impro-s impro-s impro-s impro-s impro-s"
+            "fechten-s fechten-s fechten-s fechten-s fechten-s fechten-s stunden stunden stunden stunden stunden stunden";
     }
 
     .project-overall_london {
@@ -599,7 +625,8 @@ body {
         "f_image1 f_image1 f_image1 f_image1 f_image1 f_image1 f_image2 f_image2 f_image2 f_image2 f_image2 f_image2"
         "f_image3 f_image3 f_image3 f_image3 f_image3 f_image3 f_image4 f_image4 f_image4 f_image4 f_image4 f_image4"
         "f_image5 f_image5 f_image5 f_image5 f_image5 f_image5 f_image6 f_image6 f_image6 f_image6 f_image6 f_image6"
-        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1";
+        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1"
+        "zeitung-s zeitung-s zeitung-s zeitung-s zeitung-s zeitung-s paris-s paris-s paris-s paris-s paris-s paris-s" "motion-s motion-s motion-s motion-s motion-s motion-s london-s london-s london-s london-s london-s london-s" "impro-s impro-s impro-s impro-s impro-s impro-s stunden stunden stunden stunden stunden stunden";
     background-color: white; 
     justify-items: center;
     align-items: center;
@@ -621,7 +648,8 @@ body {
         "image6_24 image6_24 image6_24 image6_24 image6_24 image6_24 image7_24 image7_24 image7_24 image7_24 image7_24 image7_24"
         "image8_24 image8_24 image8_24 image8_24 image8_24 image8_24 image9_24 image9_24 image9_24 image9_24 image9_24 image9_24"
         "cover_24 cover_24 cover_24 cover_24 cover_24 cover_24 cover_24 cover_24 cover_24 cover_24 cover_24 cover_24"
-        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1";
+        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1"
+        "zeitung-s zeitung-s zeitung-s zeitung-s zeitung-s zeitung-s paris-s paris-s paris-s paris-s paris-s paris-s" "motion-s motion-s motion-s motion-s motion-s motion-s london-s london-s london-s london-s london-s london-s" "impro-s impro-s impro-s impro-s impro-s impro-s fechten-s fechten-s fechten-s fechten-s fechten-s fechten-s";
     background-color: white;
     justify-items: center;
     align-items: center; 
@@ -645,7 +673,9 @@ body {
         "image10_paris image10_paris image10_paris image10_paris image10_paris image10_paris image11_paris image11_paris image11_paris image11_paris image11_paris image11_paris"
         "image12_paris image12_paris image12_paris image12_paris image12_paris image12_paris image12_paris image12_paris image12_paris image12_paris image12_paris image12_paris"
         "cover_paris cover_paris cover_paris cover_paris cover_paris cover_paris cover_paris cover_paris cover_paris cover_paris cover_paris cover_paris"
-        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1";
+        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1"
+        "zeitung-s zeitung-s zeitung-s zeitung-s zeitung-s zeitung-s motion-s motion-s motion-s motion-s motion-s motion-s" 
+        "london-s london-s london-s london-s london-s london-s impro-s impro-s impro-s impro-s impro-s impro-s" "fechten-s fechten-s fechten-s fechten-s fechten-s fechten-s stunden stunden stunden stunden stunden stunden";
     background-color: white; 
     justify-items: center;
     align-items: center;
@@ -676,6 +706,21 @@ body {
     align-items: center;
 }
 
+.london-grid_ende {
+    display: grid;
+    /* 12 Spalten */
+    grid-template-columns: repeat(2, 1fr); 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    gap: 30px; /* Abstand zwischen den Grid-Elementen */
+    row-gap: 30px;
+    grid-template-areas:
+        "zeitung-s paris-s" "motion-s impro-s" "fechten-s stunden";
+    background-color: white; 
+    justify-items: center;
+    align-items: center;
+}
+
 .project-grid__impro {
     display: grid;
     /* 12 Spalten */
@@ -692,7 +737,8 @@ body {
         "i_image5 i_image5 i_image5 i_image5 i_image6 i_image6 i_image6 i_image6 i_image7 i_image7 i_image7 i_image7"
         "i_image8 i_image8 i_image8 i_image8 i_image8 i_image8 i_image9 i_image9 i_image9 i_image9 i_image9 i_image9"
         "i_image10 i_image10 i_image10 i_image10 i_image10 i_image10 i_image11 i_image11 i_image11 i_image11 i_image11 i_image11"
-        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1";
+        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1"
+        "zeitung-s zeitung-s zeitung-s zeitung-s zeitung-s zeitung-s paris-s paris-s paris-s paris-s paris-s paris-s" "motion-s motion-s motion-s motion-s motion-s motion-s london-s london-s london-s london-s london-s london-s" "fechten-s fechten-s fechten-s fechten-s fechten-s fechten-s stunden stunden stunden stunden stunden stunden";
     background-color: white; 
     justify-items: center;
     align-items: center;
@@ -714,7 +760,10 @@ body {
         "z_image1 z_image1 z_image1 z_image1 z_image1 z_image1 z_image2 z_image2 z_image2 z_image2 z_image2 z_image2"
         "z_image3 z_image3 z_image3 z_image3 z_image3 z_image3 z_image4 z_image4 z_image4 z_image4 z_image4 z_image4"
         "z_image5 z_image5 z_image5 z_image5 z_image5 z_image5 . . . . . ."
-        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1";
+        "projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1 projektbeschreib_detail1"
+        "paris-s paris-s paris-s paris-s paris-s paris-s motion-s motion-s motion-s motion-s motion-s motion-s" 
+        "london-s london-s london-s london-s london-s london-s impro-s impro-s impro-s impro-s impro-s impro-s"
+        "fechten-s fechten-s fechten-s fechten-s fechten-s fechten-s stunden stunden stunden stunden stunden stunden";
     background-color: white; 
     justify-items: center;
     align-items: center;
