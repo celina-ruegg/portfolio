@@ -32,6 +32,9 @@ body {
     font-family: 'Druk Wide Web';
 	font-weight: 500;
 	font-style: normal;
+    
+    cursor: url('Images/Maus/mauscurser.svg'), default;
+    min-height: 100vh; /* Sicherstellen, dass der Body den Viewport füllt */
 }
 
 
@@ -234,16 +237,21 @@ body {
 }
 
 .zentrierter-titel-startseite {
-    font-size: clamp(20px, 10vw, 130px);
-    /* NEU: Farbe auf Weiß, um auf dem Slider-Bild sichtbar zu sein */
-    color: rgb(0, 0, 0); 
-    grid-area: hero; 
-    z-index: 10; 
-    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    width: 100%; /* Der Titel darf die volle Breite nutzen */
     text-align: center;
-    line-height: .85;
-}
+    pointer-events: none;
+    margin: 0;
 
+    /* --- HIER DIE GRÖSSE ANPASSEN --- */
+    font-size: 8rem; /* Versuche 'rem' für eine feste Größe oder 'vw' für eine flexible */
+    text-transform: uppercase; /* Falls alles groß geschrieben sein soll */
+    line-height: 1;
+}
 /* =====================================================================================================================================*/
 
 /* ===============================================================================================================*/
@@ -251,20 +259,9 @@ body {
 /* ===============================================================================================================*/
 
 .project-grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr); 
-    gap: 0; 
-    row-gap: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    grid-template-areas: 
-        "hero hero hero hero hero hero hero hero hero hero hero hero"; 
-    /* WICHTIG: Setzt den Referenzpunkt für den absolut positionierten Titel */
+    display: block; /* Verhindert, dass Titel und Slider nebeneinander stehen */
     position: relative; 
-    
-    background-color: white;
-    justify-items: center;
-    align-items: center;
+    width: 100%;
 }
 
 .startseite-grid {
@@ -289,36 +286,73 @@ body {
 /* ===============================================================================================================*/
 /* SLIDER CONTAINER */
 /* ===============================================================================================================*/
+/* Container für das sanfte Gleiten */
 .slider-container {
-    grid-area: hero; 
-    z-index: 1; 
-    /* WICHTIG: Höhe flexibel halten, damit das Bild nicht beschnitten wird */
-    min-height: 0vh; /* Mindesthöhe für den Slider-Bereich */
-    height: auto;
-    /* Slider Funktionalität */
     display: flex;
-    flex-wrap: nowrap; 
-    overflow-x: scroll; 
-    scroll-snap-type: x mandatory; 
-    /* Scrollbar ausblenden */
-    -ms-overflow-style: none;
+    width: 100%;
+    height: auto;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
     scrollbar-width: none;
 }
+
 .slider-container::-webkit-scrollbar {
-    display: none; 
+    display: none; /* Versteckt Scrollbar in Chrome/Safari */
 }
 
+/* Erzwingt absolute Transparenz für den Cursor-Bereich */
+.nav-arrow, .slide img {
+    background-color: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Einzelner Slide */
 .slide {
-    /* WICHTIG: Jedes Slide muss 100% der Breite des Containers einnehmen */
-    min-width: 100%; 
-    /* Höhe auto für das Bild */
-    height: auto; 
-    scroll-snap-align: start; 
-    
-    /* Stellt sicher, dass das Bild innerhalb des Slides richtig positioniert wird */
-    display: flex; 
+    min-width: 100%;
+    position: relative; /* Basis für die absoluten Pfeile */
+    scroll-snap-align: start;
+    display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Die Navigations-Pfeile */
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2); /* Dezent sichtbar */
+    color: black;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 2rem;
+    z-index: 10;
+    
+    /* Hier bindest du deinen Mauszeiger für die Pfeile ein */
+    cursor: url('mauscurser.svg'), auto;
+}
+
+.nav-arrow:hover {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+/* Optional: Mauszeiger auch auf den Bildern */
+.slide-link {
+    cursor: url('mauscurser.svg'), auto;
+    display: block;
+    width: 100%;
 }
 
 
@@ -560,6 +594,24 @@ body {
 /* ===============================================================================================================*/
 /* Media Query für Smartphones (z.B. maximale Breite 768px) */
 /* ===============================================================================================================*/
+@media screen and (max-width: 767px) {
+    /* ... dein bisheriger Code zum Ausblenden ... */
+
+    .startseite-grid {
+        margin-top: 50px; /* Schiebt das Grid unter den Header */
+        padding: 0 20px;   /* Sorgt für Abstand zu den Seitenrändern */
+    }
+/* Versteckt den Slider und den darüberliegenden Titel */
+    .project-grid {
+        display: none !important;
+    }
+
+    /* Falls du den Titel separat im HTML hast, sicherheitshalber auch diesen: */
+    .zentrierter-titel-startseite {
+        display: none !important;
+    }
+    /* Der Rest der Seite (dein startseite-grid) bleibt sichtbar */
+}
 @media (max-width: 768px) {
 
     /* 2. OPTIONAL: Wenn Sie den Header verkleinern wollen */
